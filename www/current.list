@@ -86,4 +86,4 @@ pex_policy       generic    3.3.5
 security         generic    3.2.2
 sdqa             generic    3.0.3
 utils            generic    3.4.3
-LSSTPipe         generic    3.2
+LSSTPipe         generic    3.3
