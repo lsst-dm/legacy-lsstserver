@@ -1,0 +1,2 @@
+setupRequired("numarray")
+envAppend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)

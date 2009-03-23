@@ -1,0 +1,3 @@
+# pkg flavor  version tablefile installation_directory installID
+#---- ------- ------- --------- ---------------------- --------------
+eups  generic 1.0.3   none      ../eups/1.0.3          lsstbuild:external/eups/1.0.3/eups.bld

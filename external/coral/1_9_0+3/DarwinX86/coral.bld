@@ -1,0 +1,10 @@
+# LSST build script (lssteups) for coral
+#
+fetch external/coral/$version/DarwinX86/coral-${version}-DarwinX86.tar.gz
+unpack_tar_and_enter coral-${version}-DarwinX86.tar.gz
+
+pkgdir=`dirname $installdir`
+mkdir -p $pkgdir
+bash fixmeup.sh $pkgdir $version
+mv $version $pkgdir
+

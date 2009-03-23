@@ -1,0 +1,92 @@
+diff -Naur swig-1.3.36/Lib/shared_ptr.i swig-1.3.36-patched/Lib/shared_ptr.i
+--- swig-1.3.36/Lib/shared_ptr.i	2008-02-09 04:25:41.000000000 -0800
++++ swig-1.3.36-patched/Lib/shared_ptr.i	2008-11-12 12:16:00.716990596 -0800
+@@ -44,10 +44,12 @@
+ %define SWIG_SHARED_PTR_DERIVED(PROXYCLASS, BASECLASSTYPE, TYPE...)
+ SWIG_SHARED_PTR_TYPEMAPS(PROXYCLASS, , TYPE)
+ SWIG_SHARED_PTR_TYPEMAPS(PROXYCLASS, const, TYPE)
++#if !defined(SWIGPYTHON)
+ %types(SWIG_SHARED_PTR_NAMESPACE::shared_ptr< TYPE > = SWIG_SHARED_PTR_NAMESPACE::shared_ptr< BASECLASSTYPE >) %{
+   *newmemory = SWIG_CAST_NEW_MEMORY;
+   return (void *) new SWIG_SHARED_PTR_NAMESPACE::shared_ptr< BASECLASSTYPE >(*(SWIG_SHARED_PTR_NAMESPACE::shared_ptr< TYPE > *)$from);
+   %}
++#endif
+ %extend TYPE {
+   static SWIG_SHARED_PTR_NAMESPACE::shared_ptr< BASECLASSTYPE > SWIGSharedPtrUpcast(SWIG_SHARED_PTR_NAMESPACE::shared_ptr< TYPE > swigSharedPtrUpcast) {
+     return swigSharedPtrUpcast;
+diff -Naur swig-1.3.36/Source/Modules/python.cxx swig-1.3.36-patched/Source/Modules/python.cxx
+--- swig-1.3.36/Source/Modules/python.cxx	2008-06-21 08:23:02.000000000 -0700
++++ swig-1.3.36-patched/Source/Modules/python.cxx	2008-11-12 12:26:35.993625718 -0800
+@@ -862,7 +862,11 @@
+ 	  if (!options || (!Getattr(options, "noshadow") && !Getattr(options, "noproxy"))) {
+ 	    Printf(import, "_%s\n", modname);
+ 	    if (!Strstr(f_shadow_imports, import)) {
+-	      Printf(f_shadow, "import %s\n", modname);
++	      if (pkg && (!package || Strcmp(pkg, package) != 0)) {
++	        Printf(f_shadow, "import %s.%s\n", pkg, modname);
++	      } else {
++	        Printf(f_shadow, "import %s\n", modname);
++	      }
+ 	      Printv(f_shadow_imports, import, NULL);
+ 	    }
+ 	  }
+@@ -2541,6 +2545,44 @@
+   }
+ 
+   /* ------------------------------------------------------------
++   * generateSmartPtrCasts()
++   *
++   * Recursively look at base classes of a wrapped type - which should
++   * be marked via %feature("smartptr") - and generate smart pointer 
++   * upcasts from the wrapped type to every base.
++   * ------------------------------------------------------------ */
++
++  static void generateSmartPtrCasts(Node *n, SwigType *smart, String *smartnamestr, SwigType * wrapped, const char *bases) {
++    List *baselist = Getattr(n, bases);
++    if (!baselist)
++      return;
++    int len = Len(baselist);
++    for (int i = 0; i < len; i++) {
++      Node *b = Getitem(baselist, i);
++      String *bname = Getattr(b, "python:proxy");
++      if (bname && !GetFlag(b, "feature:ignore")) {
++        String *bsmartnamestr = 0;
++        String *convcode = NewString("");
++        SwigType *bsmart = Copy(smart);
++        // construct SwigType for smart pointer to base class 
++        SwigType *bwrapped = SwigType_typedef_resolve_all(Getattr(b, "name"));
++        Replace(bsmart, wrapped, bwrapped, DOH_REPLACE_ANY);
++        bsmartnamestr = SwigType_namestr(bsmart);
++        // construct casting code
++        Printv(convcode, "\n", ctab4, "*newmemory = SWIG_CAST_NEW_MEMORY;\n", ctab4, "return (void *) new ", bsmartnamestr, "(*(", smartnamestr, " *)$from);\n", NIL);
++        // setup inheritance relationship between smart pointer templates
++        SwigType_inherit(smart, bsmart, 0, convcode);
++        Delete(bwrapped);
++        Delete(bsmart);
++        Delete(convcode);
++        Delete(bsmartnamestr);
++      }
++      // recursively hit base classes
++      generateSmartPtrCasts(b, smart, smartnamestr, wrapped, bases);
++    }
++  }
++
++  /* ------------------------------------------------------------
+    * classHandler()
+    * ------------------------------------------------------------ */
+ 
+@@ -2660,6 +2702,14 @@
+           if (cpt) {
+             smart = SwigType_typedef_resolve_all(cpt);
+             Delete(cpt);
++            if (SwigType_istemplate(smart)) {
++              // Generate smart pointer casting functions from list of base classes
++              String *smartnamestr = SwigType_namestr(smart);
++              SwigType *wrapped = SwigType_typedef_resolve_all(real_classname);
++              generateSmartPtrCasts(n, smart, smartnamestr, wrapped, "bases");
++              Delete(wrapped);
++              Delete(smartnamestr);
++            }
+           } else {
+             // TODO: report line number of where the feature comes from
+             Swig_error(Getfile(n), Getline(n), "Invalid type (%s) in 'smartptr' feature for class %s.\n", smartptr, real_classname);

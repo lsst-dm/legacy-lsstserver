@@ -1,0 +1,7 @@
+# LSST build script for wcslib 4.2
+#
+fetch external/wcslib/${version}/wcslib-${version}.tar.gz
+unpack_tar_and_enter wcslib-${version}.tar.gz
+
+simplescons prefix=$installdir
+

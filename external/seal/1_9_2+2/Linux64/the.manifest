@@ -1,0 +1,2 @@
+>merge pkg=boost version=1.34.1
+>self installFile=seal.bld installType=lsstbuild

@@ -1,0 +1,2 @@
+>merge pkg=tcltk
+>self installFile=xpa.bld

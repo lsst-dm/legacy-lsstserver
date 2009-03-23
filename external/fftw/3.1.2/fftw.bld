@@ -1,0 +1,8 @@
+# LSST build script for fftw-3.1.2
+#
+fetch external/fftw/${version}/fftw-${version}.tar.gz
+unpack_tar_and_enter fftw-${version}.tar.gz
+
+./configure --prefix=${installdir} --disable-fortran
+make
+make install

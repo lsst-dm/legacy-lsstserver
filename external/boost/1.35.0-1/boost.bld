@@ -1,0 +1,36 @@
+# LSST build script for boost 
+#
+# This should work on Linux and Linux64
+#
+# Some Linux systems (Ubuntu) do not provide a callable g++; if this
+# is case, trick Boost into using gcc
+gcc=`/usr/bin/which gcc` || true
+gpp=`/usr/bin/which g++` || true
+if [ -z "$gcc" ]; then
+    echo "gcc apparently not available"
+    return 1
+fi
+if [ -n "$gcc" -a -z "$gpp" ]; then
+    echo "Note: we don't have a executable g++."
+    mkdir build.bin && cd build.bin
+    ln -s $gcc g++
+    PATH=${PATH}:$PWD
+    cd ..
+fi
+
+tarfile=boost_1_35_0.tar.gz
+
+fetch external/boost/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+simplemake 
+
+cd $installdir/include
+ln -s boost-*/boost boost
+cd ..
+fetch external/boost/$version/addboostlinks.sh
+bash addboostlinks.sh
+
+cd $builddir
+
+

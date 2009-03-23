@@ -1,0 +1,9 @@
+# lsst build script for numarray
+# 
+fetch external/numarray/$version/numarray-${version}.tar.gz
+
+unpack_tar_and_enter numarray-${version}.tar.gz
+
+#simplepysetup --home=$installdir --install-headers=$installdir/include/python/numarray
+simplepysetup  --install-headers=$installdir/include/python/numarray
+

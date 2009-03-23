@@ -1,0 +1,11 @@
+# LSSTeups build script for mpich2
+#
+fetch external/mpich2/$version/mpich2-$version.tar.gz
+unpack_tar_and_enter mpich2-$version.tar.gz
+
+export CFLAGS=-fPIC
+
+simplemake
+
+
+

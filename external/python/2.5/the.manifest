@@ -1,0 +1,4 @@
+>merge pkg=termcap
+>merge pkg=tcltk
+>merge pkg=readline
+>self installFile=python.bld

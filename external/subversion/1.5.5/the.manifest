@@ -1,0 +1,3 @@
+>merge pkg=openssl
+>merge pkg=expat
+>self installFile=subversion.bld

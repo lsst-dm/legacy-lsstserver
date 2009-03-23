@@ -1,0 +1,23 @@
+# LSST build script for activemqcpp 2.1.7b2
+#
+# The patch file enables package to build under gcc 4.3
+#
+srcver=2.1-RC1
+tarfile=activemq-cpp-${srcver}-src.tar.gz
+echo 'in build script'
+
+fetch external/activemqcpp/${version}/${tarfile}
+fetch external/activemqcpp/${version}/activemq.patch
+unpack_tar_and_enter $tarfile
+
+echo patch -p1 \< ../activemq.patch | tee -a $buildlog
+patch -p1 < ../activemq.patch >> $buildlog 2>&1
+
+echo ./autogen.sh | tee -a $buildlog
+./autogen.sh >> $buildlog 2>&1
+
+simplemake
+
+cd $installdir/include
+mv activemq-cpp-*/* .
+

@@ -1,0 +1,3 @@
+>merge pkg=boost version=1.34.1
+>merge pkg=pcre flavor=DarwinX86 version=7
+>self installFile=seal.bld installType=lsstbuild

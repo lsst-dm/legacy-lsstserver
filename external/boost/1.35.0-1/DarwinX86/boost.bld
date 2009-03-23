@@ -1,0 +1,18 @@
+# LSST build script for boost 
+#
+tarfile=boost_1_35_0.tar.gz
+
+fetch fetch external/jaula/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+simplemake 
+
+fetch external/boost/$version/update4coral.sh
+bash update4coral.sh
+
+cd $installdir/include
+ln -s boost-*/boost boost
+
+cd $builddir
+
+

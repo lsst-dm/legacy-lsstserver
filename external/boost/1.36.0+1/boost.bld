@@ -1,0 +1,24 @@
+# LSST build script for boost 
+#
+# This should work on Linux and Linux64
+#
+tarfile=boost_1_36_0.tar.gz
+
+[ -n "$MPICH2_DIR" ] || { echo "mpich2 package is not setup!"; false; }
+
+fetch external/boost/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+fetch external/boost/$version/boost-mpi-config.jam
+
+doconfig
+cat boost-mpi-config.jam >> user-config.jam
+make
+makeinstall
+
+cd $installdir/include
+ln -s boost-*/boost boost
+
+cd $builddir
+
+

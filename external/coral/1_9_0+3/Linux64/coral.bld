@@ -1,0 +1,8 @@
+# LSST build script (lssteups) for coral
+#
+fetch external/coral/$version/Linux64/coral-${version}-Linux64.tar.gz
+unpack_tar_and_enter coral-${version}-Linux64.tar.gz
+
+pkgdir=`dirname $installdir`
+mkdir -p $pkgdir
+mv $version $pkgdir

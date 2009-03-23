@@ -1,0 +1,24 @@
+# LSST build script for vw
+#
+fetch external/vw/$version/vw-${version}.tar.gz
+unpack_tar_and_enter vw-${version}.tar.gz
+
+if [ -e "/usr/lib64" ]; then
+    echo "This looks like a 64-bit system; need to patch before building"
+    fetch external/vw/$version/findlib64.sh
+
+    export VW_DIR=$installdir
+    bash findlib64.sh m math.h >> $buildlog 2>&1
+
+    fetch external/vw/$version/LinearAlgebra-64bit.h
+    echo mv LinearAlgebra-64bit.h src/vw/Math/LinearAlgebra.h >> $buildlog 
+    mv LinearAlgebra-64bit.h src/vw/Math/LinearAlgebra.h
+else
+    echo "This looks like a 32-bit system"
+fi
+
+echo ./configure --prefix=$installdir --with-paths=\"$BOOST_DIR $VWLAPACK_DIR $installdir/lib64 /usr\"
+./configure --prefix=$installdir --with-paths="$BOOST_DIR $VWLAPACK_DIR $installdir/lib64 /usr" >> $buildlog 2>&1
+make
+makeinstall
+

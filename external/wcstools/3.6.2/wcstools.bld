@@ -1,0 +1,16 @@
+# LSST build script for wcstools
+#
+fetch external/wcstools/$version/wcstools-${version}.tar.gz
+unpack_tar_and_enter wcstools-${version}.tar.gz
+echo make 'CFLAGS="-g -O2 -fPIC"'
+
+$make CFLAGS="-g -O2 -fPIC" >> $buildlog
+
+mkdir lib include
+ln -s ../libwcs/libwcs.a lib/libwcs.a
+cp libwcs/*.h include
+
+bdir=`basename $PWD`
+cd ..
+mkdir -p `dirname $installdir`
+mv $bdir $installdir

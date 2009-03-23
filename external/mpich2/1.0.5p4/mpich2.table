@@ -1,0 +1,4 @@
+envAppend(PATH, ${PRODUCT_DIR}/bin)
+envAppend(MANPATH, ${PRODUCT_DIR}/man)
+envAppend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envAppend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)

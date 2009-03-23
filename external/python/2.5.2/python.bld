@@ -1,0 +1,13 @@
+[ -n "$TCLTK_DIR" ] || { echo TclTk appears not to be setup; false; }
+
+fetch external/python/$version/Python-${version}.tgz
+unpack_tar_and_enter Python-${version}.tgz
+
+fetch external/python/$version/lsst-tkinter-python-Setup
+sed -e "s!TCL_TK_PATH!$TCLTK_DIR!" lsst-tkinter-python-Setup > Modules/Setup
+
+doconfig --enable-shared
+make
+makeinstall
+
+

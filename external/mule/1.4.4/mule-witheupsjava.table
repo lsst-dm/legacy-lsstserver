@@ -1,0 +1,3 @@
+setupRequired(java >= 1.6.0)
+envSet(MULE_HOME, ${PRODUCT_DIR})
+envPrepend(PATH, ${PRODUCT_DIR}/bin)

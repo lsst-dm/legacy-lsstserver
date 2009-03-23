@@ -1,0 +1,20 @@
+# LSST build script for openssl
+#
+# This should work on Linux and Linux64
+#
+tarfile=$product-$version.tar.gz
+
+fetch external/$product/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+echo ./config --openssldir=$installdir no-idea no-mdc2 no-rc5
+./config --openssldir=$installdir no-idea no-mdc2 no-rc5 > $buildlog 2>&1 || {
+    echo "config..."
+    tail -20 $buildlog
+    echo "$product: configure failed; see $PWD/$buildlog for details"
+    exit 1
+}
+make depend
+make
+makeinstall
+

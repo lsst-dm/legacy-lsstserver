@@ -1,0 +1,13 @@
+[ -n "$READLINE_DIR" ] || { echo readline appears not to be setup; false; }
+[ -n "$TCLTK_DIR" ] || { echo TclTk appears not to be setup; false; }
+
+fetch external/python/$version/Python-${version}.tgz
+unpack_tar_and_enter Python-${version}.tgz
+
+fetch external/python/$version/lsst-tkinter-python-Setup
+sed -e "s!TCL_TK_PATH!$TCLTK_DIR!" -e "s!READLINE_LIB_PATH!$READLINE_DIR/lib!" -e "s!READLINE_INCLUDE_PATH!$READLINE_DIR/include!" -e "s!TERMCAP_LIB_PATH!$TERMCAP_DIR/lib!" lsst-tkinter-python-Setup > Modules/Setup
+
+doconfig --with-libs="$TERMCAP_DIR/lib/libtermcap.a $READLINE_DIR/lib/libreadline.a $READLINE_DIR/lib/libhistory.a"
+make
+makeinstall
+

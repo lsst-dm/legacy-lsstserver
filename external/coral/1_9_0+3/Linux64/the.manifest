@@ -1,0 +1,3 @@
+>merge pkg=boost version=1.34.1
+>merge pkg=seal version=1_9_2+2
+>self installFile=coral.bld installType=lsstbuild

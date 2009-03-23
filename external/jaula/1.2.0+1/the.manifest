@@ -1,0 +1,3 @@
+>merge pkg=flex
+>merge pkg=doxygen
+>self installFile=jaula.bld

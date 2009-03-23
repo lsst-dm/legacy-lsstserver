@@ -1,0 +1,4 @@
+>merge: seal 1_9_2+2
+>merge: boost 1.35.0-1
+>merge: mysqlclient 5.0.45+1
+>self

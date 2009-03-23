@@ -1,0 +1,16 @@
+#
+# lssteups build script for mysql-python
+#
+[ -n "$MYSQLCLIENT_DIR" ] || { echo "mysqlclient not setup."; false; }
+
+fetch external/$product/$version/MySQL-python-${version}.tar.gz
+unpack_tar_and_enter MySQL-python-${version}.tar.gz
+
+pyinstalldir=$installdir/lib/python
+PYTHONPATH=${pyinstalldir}:$PYTHONPATH
+mkdir -p $pyinstalldir
+
+simplepysetup
+
+
+

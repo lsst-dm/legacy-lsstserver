@@ -1,0 +1,17 @@
+# LSST build script for boost 
+#
+# This should work on Linux and Linux64
+#
+tarfile=boost_1_36_0.tar.gz
+
+fetch external/boost/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+simplemake 
+
+cd $installdir/include
+ln -s boost-*/boost boost
+
+cd $builddir
+
+

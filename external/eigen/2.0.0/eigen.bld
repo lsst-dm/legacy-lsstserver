@@ -1,0 +1,20 @@
+# LSST build script for eigen
+#
+# This should work on Linux, Linux64, and DarwinX86
+#
+tarfile=$product-$version.tar.gz
+
+fetch external/$product/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+echo mkdir -p $installdir/include >> $buildlog
+mkdir -p $installdir/include >> $buildlog 2>&1
+echo cp -r Eigen $installdir/include >> $buildlog
+cp -r Eigen $installdir/include >> $buildlog 2>&1
+
+echo cd $installdir/include/Eigen >> $buildlog
+cd $installdir/include/Eigen >> $buildlog 2>&1
+echo ln -fs Core Core.h >> $buildlog
+ln -fs Core Core.h >> $buildlog 2>&1
+
+cd $builddir

@@ -1,0 +1,8 @@
+# LSST build script for cfitsio
+#
+fetch external/cfitsio/$version/cfitsio3006.tar.gz
+unpack_tar_and_enter cfitsio3006.tar.gz 
+doconfig
+make
+mkdir -p $installdir
+makeinstall

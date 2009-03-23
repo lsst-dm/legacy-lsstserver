@@ -1,0 +1,47 @@
+# LSST build script for subversion
+#
+# This should work on Linux and Linux64
+#
+apr=apr-1.3.3
+aprutil=apr-util-1.3.4
+aprtarfile=${apr}.tar.gz
+aprutiltarfile=${aprutil}.tar.gz
+tarfile=$product-$version.tar.gz
+deptarfile=$product-deps-$version.tar.gz
+
+[ -n "$OPENSSL_DIR" ] || { echo "openssl package is not setup!"; false; }
+[ -n "$EXPAT_DIR" ] || { echo "expat package is not setup!"; false; }
+
+# 
+# First build the APR core package
+#
+fetch external/$product/$version/$aprtarfile
+unpack_tar_and_enter $aprtarfile
+
+echo Building the Apache Portable Runtime "(APR)" library
+doconfig --disable-shared 
+make
+cd ..
+
+#
+# Now build the APR utils package
+#
+fetch external/$product/$version/$aprutiltarfile
+unpack_tar_and_enter $aprutiltarfile
+
+doconfig --disable-shared --with-apr=../$apr
+make
+cd ..
+
+#
+# Now build subversion
+#
+fetch external/$product/$version/$tarfile
+fetch external/$product/$version/$deptarfile
+echo tar xzf $tarfile
+tar xzf $tarfile
+unpack_tar_and_enter $deptarfile
+
+CPPFLAGS=-I$EXPAT_DIR/include LDFLAGS=-L$EXPAT_DIR/lib simplemake --disable-shared --with-apr=$PWD/../$apr --with-apr-util=$PWD/../$aprutil --with-openssl=$OPENSSL_DIR --without-apache --without-apxs
+
+

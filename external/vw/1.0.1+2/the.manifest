@@ -1,0 +1,3 @@
+>merge pkg=boost ver=1.34.1 installFile=boost.bld
+>merge pkg=vwlapack
+>self installFile=vw.bld

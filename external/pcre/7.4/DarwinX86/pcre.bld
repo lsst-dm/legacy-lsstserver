@@ -1,0 +1,9 @@
+# LSSTeups build script for pcre
+#
+fetch external/pcre/$version/DarwinX86/pcre-${version}-DarwinX86.tar.gz
+unpack_tar_and_enter pcre-${version}-DarwinX86.tar.gz
+
+pkgdir=`dirname $installdir`
+mkdir -p $pkgdir
+bash fixmeup.sh $pkgdir $version
+mv $version $pkgdir
