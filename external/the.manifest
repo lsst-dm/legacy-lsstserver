@@ -1,5 +1,0 @@
-EUPS distribution manifest for wcstools (3.6.2). Version 1.0
-#
-# pkg    flavor  version    tablefile                installation_directory     installID
-#------  ------- -------    -----------------------  ----------------------- ------------------
-wcstools generic 3.6.2      external/wcstools.table  external/wcstools/3.6.2 lsstbuild:external/wcstools.bld
