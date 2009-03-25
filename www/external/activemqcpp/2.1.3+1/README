@@ -1,0 +1,2 @@
+This provides an LSST-customized version of activempcpp.  The tarball was 
+created from svn+ssh://dev.lsstcorp.org/vendor/activemp/tags/2.1.3+1.
