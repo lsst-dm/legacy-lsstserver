@@ -11,7 +11,7 @@ aprutiltar=apr-util-1.3.4.tar.gz
 fetch external/apr/$version/$aprtar
 unpack_tar_and_enter $aprtar
 
-simplemake --disable-shared 
+CFLAGS=-fPIC simplemake --disable-shared 
 
 #
 # Now install the APR utils package
@@ -19,7 +19,7 @@ simplemake --disable-shared
 fetch external/apr/$version/$aprutiltar
 unpack_tar_and_enter $aprutiltar
 
-simplemake --disable-shared --with-apr=$installdir
+CFLAGS=-fPIC simplemake --disable-shared --with-apr=$installdir
 
 
 
