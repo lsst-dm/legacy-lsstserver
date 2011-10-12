@@ -11,5 +11,9 @@ make
 makeinstall
 
 # enable setuptools
+echo installing ez_setup.py... | tee -a $buildlog
 fetch external/python/$release/ez_setup.py
+
+LD_LIBRARY_PATH=$installdir/lib:$LD_LIBRARY_PATH
+echo $installdir/bin/python ez_setup.py >> $buildlog
 $installdir/bin/python ez_setup.py
