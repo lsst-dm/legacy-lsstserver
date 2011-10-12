@@ -1,4 +1,0 @@
->merge pkg=boost
->merge pkg=vwlapack
->merge pkg=automake
->self installFile=vw.bld

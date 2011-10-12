@@ -1,4 +1,0 @@
-setupRequired("boost 1.35.0")
-envAppend(SEAL_PLUGINS, ${PRODUCT_DIR}/lib/modules)
-envAppend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
-envAppend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)

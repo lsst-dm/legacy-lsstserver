@@ -1,8 +1,0 @@
-fetch external/doxygen/$version/doxygen-${version}.src.tar.gz
-unpack_tar_and_enter doxygen-${version}.src.tar.gz
-
-echo ./configure --prefix $installdir
-./configure --prefix $installdir >> $buildlog 2>&1
-
-make
-makeinstall

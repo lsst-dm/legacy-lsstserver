@@ -1,4 +1,0 @@
-setupRequired("tcltk 8.5a4")
-setupRequired("termcap")
-setupRequired("readline")
-envPrepend(PATH, ${PRODUCT_DIR}/bin)

@@ -1,2 +1,0 @@
-envSet(ACTIVEMQ_HOME, ${PRODUCT_DIR})
-envPrepend(PATH, ${PRODUCT_DIR}/bin)

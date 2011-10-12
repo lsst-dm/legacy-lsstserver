@@ -1,2 +1,0 @@
-setupRequired("python")
-envAppend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)

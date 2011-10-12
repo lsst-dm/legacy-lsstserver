@@ -1,9 +1,0 @@
-# LSST build script for lam
-#
-fetch external/lam/${version}/lam-${version}.tar.gz
-unpack_tar_and_enter lam-${version}.tar.gz
-
-./configure --prefix=${installdir} --without-fc
-make
-make install
-

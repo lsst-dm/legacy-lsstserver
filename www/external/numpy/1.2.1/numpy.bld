@@ -1,8 +1,0 @@
-# lsst build script for numpy
-# 
-fetch external/numpy/$version/numpy-${version}.tar.gz
-
-unpack_tar_and_enter numpy-${version}.tar.gz
-
-pysetup --home=$installdir
-

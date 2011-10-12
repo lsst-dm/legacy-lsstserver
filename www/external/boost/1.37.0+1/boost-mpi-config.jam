@@ -1,6 +1,0 @@
-
-using mpi  :  ${LSST_PKGS}/external/mpich2/1.0.5p4/bin/mpicxx
-           : <include>${MPICH2_DIR}/include 
-             <cxxflags>-DMPICH_IGNORE_CXX_SEEK 
-             <library-path>${MPICH2_DIR}/lib 
-             <find-shared-library>mpich  ;

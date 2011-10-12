@@ -1,2 +1,0 @@
->merge pkg=tcltk
->self installFile=python.bld

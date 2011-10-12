@@ -1,2 +1,0 @@
->merge pkg=cfitsio
->self installFile=wcslib.bld

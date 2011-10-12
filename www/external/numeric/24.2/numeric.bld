@@ -1,8 +1,0 @@
-# lsst build script for numeric
-# 
-fetch external/numeric/$version/numeric-${version}.tar.gz
-
-unpack_tar_and_enter numeric-${version}.tar.gz
-
-pysetup --home=$installdir --install-headers=$installdir/include/python/numeric
-

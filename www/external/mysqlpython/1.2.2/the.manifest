@@ -1,3 +1,0 @@
->merge pkg=python
->merge pkg=mysqlclient
->self installFile=mysqlpython.bld

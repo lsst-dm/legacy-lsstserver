@@ -1,5 +1,0 @@
-all: clean 
-	echo "PDF generation disabled"
-
-clean:
-	rm -f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out refman.pdf

@@ -1,4 +1,0 @@
-# Configuration for a DC2 server
-DISTRIB_SERVER_CLASS = lssteups.DistribServer
-DISTRIB_CLASS = lssteups.BuildDistrib
-

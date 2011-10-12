@@ -1,5 +1,0 @@
-I've unzipped and retarred the VisionWorkbench-LAPACK.tar.gz
-tarball as vwlapack-1.0.0.tgz, since the hyphen doesn't
-work with the build system.
-
-David @%<

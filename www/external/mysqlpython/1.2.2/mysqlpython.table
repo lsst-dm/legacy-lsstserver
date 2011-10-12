@@ -1,5 +1,0 @@
-setupRequired("python")
-setupRequired("mysqlclient")
-envAppend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)
-envAppend(PATH, ${PRODUCT_DIR}/bin)
-

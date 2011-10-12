@@ -1,2 +1,0 @@
->merge pkg=autoconf
->self pkgpath=external installFile=activemqcpp.bld
