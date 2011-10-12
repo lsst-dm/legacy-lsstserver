@@ -1,0 +1,9 @@
+EUPS distribution manifest for boost (1.47.0+1). Version 1.0
+#
+# pkg  flavor  version  tablefile                          installation_directory  installID
+#----- ------- -------- ---------------------------------- --------------------
+tcltk  generic 8.5.9+1  external/tcltk/8.5.9/tcltk.table   external/tcltk/8.5.9+1  lsstbuild:external/tcltk/8.5.9/tcltk.bld
+python generic 2.7.2+1  external/python/2.7.2/python.table external/python/2.7.2+1 lsstbuild:external/python/2.7.2/python.bld
+mpich2 generic 1.0.8+1  external/mpich2/1.0.8/mpich2.table external/mpich2/1.0.8+1 lsstbuild:external/mpich2/1.0.8/mpich2-1.0.8.tar.gz
+boost  generic 1.47.0+2 external/boost/1.47.0/boost.table  external/boost/1.47.0+2 lsstbuild:external/boost/1.47.0/boost.bld
+boost_mpi  generic 1.47.0+1 external/boost_mpi/1.47.0/boost.table  external/boost_mpi/1.47.0+1 lsstbuild:external/boost_mpi/1.47.0/boost_mpi.bld
