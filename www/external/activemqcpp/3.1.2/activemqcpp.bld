@@ -1,0 +1,28 @@
+# LSST internal build script, distributed with this version of
+#  activemqcpp
+#
+# The purpose of this file is to:
+#   1) provide extra configure arguments
+#   2) adjust the location of the include files.
+#   3) install documentation
+set -e
+
+[ -n "$APR_DIR" ] || { echo "apr package is not setup!"; false; }
+[ -n "$DOXYGEN_DIR" ] || { echo "doxygen package is not setup!"; false; }
+
+tarfile=activemq-cpp-library-$release-src.tar.gz
+fetch external/activemqcpp/$release/$tarfile
+unpack_tar_and_enter $tarfile
+
+simplemake --with-apr=$APR_DIR --with-apr-util=$APR_DIR --enable-doxygen-man
+
+echo "Adjusting the location of include files..." | tee -a $buildlog
+echo mv $installdir/include/activemq-cpp-*/* $installdir/include >> $buildlog 2>&1
+mv $installdir/include/activemq-cpp-*/* $installdir/include 2>&1 | tee -a $buildlog
+
+echo "Making and installing documentation..." | tee -a $buildlog
+echo make doxygen-run | tee -a $buildlog
+make doxygen-run >> $buildlog 2>&1 
+echo tar cf - doc \| \(cd $installdir\; tar xf -\) | tee -a $buildlog
+(tar cf - doc | (cd $installdir; tar xf -) ) 2>&1 | tee -a $buildlog
+

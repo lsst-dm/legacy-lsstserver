@@ -1,0 +1,7 @@
+# LSSTeups build script for scisql
+#
+set -e
+fetch external/scisql/$release/scisql-${release}.tar.gz
+unpack_tar_and_enter scisql-${release}.tar.gz
+simplemake --client-only
+

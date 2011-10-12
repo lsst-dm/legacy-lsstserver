@@ -1,0 +1,26 @@
+# LSST build script for apr and apr-utils
+#
+# This should work on Linux and Linux64
+#
+set -e
+aprtar=apr-$release.tar.gz
+aprutiltar=apr-util-1.3.4.tar.gz
+
+# 
+# First install the APR core package
+#
+fetch external/apr/$release/$aprtar
+unpack_tar_and_enter $aprtar
+
+CFLAGS=-fPIC simplemake --disable-shared 
+
+#
+# Now install the APR utils package
+#
+fetch external/apr/$release/$aprutiltar
+unpack_tar_and_enter $aprutiltar
+
+CFLAGS=-fPIC simplemake --disable-shared --with-apr=$installdir
+
+
+

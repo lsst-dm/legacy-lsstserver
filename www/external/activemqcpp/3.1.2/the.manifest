@@ -1,0 +1,4 @@
+>merge pkg=apr
+>merge pkg=doxygen
+>self installFile=activemqcpp.bld
+

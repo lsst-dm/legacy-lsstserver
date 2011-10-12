@@ -21,3 +21,6 @@ matplotlib  generic 1.0.1+2   external/matplotlib/1.0.1/matplotlib.table    exte
 minuit2     generic 5.22.00+1 external/minuit2/5.22.00/minuit2.table        external/minuit2/5.22.00+1    lsstbuild:external/minuit2/5.22.00/minuit2.bld
 xpa         generic 2.1.13+1  external/xpa/2.1.13/xpa.table                 external/xpa/2.1.13+1         lsstbuild:external/xpa/2.1.13/xpa.bld
 minuit2     generic 5.22.00+1 external/minuit2/5.22.00/minuit2.table        external/minuit2/5.22.00+1    lsstbuild:external/minuit2/5.22.00/minuit2.bld
+apr         generic 1.3.3+1   external/apr/1.3.3/apr.table                  external/apr/1.3.3+1          lsstbuild:external/apr/1.3.3/apr.bld
+activemqcpp generic 3.1.2+1   external/activemqcpp/3.1.2/activemqcpp.table  external/activemqcpp/3.1.2+1  lsstbuild:external/activemqcpp/3.1.2/activemqcpp.bld
+scisql      generic 0.1+1     external/scisql/0.1/scisql.table              external/scisql/0.1+1         lsstbuild:external/scisql/0.1/scisql.bld
