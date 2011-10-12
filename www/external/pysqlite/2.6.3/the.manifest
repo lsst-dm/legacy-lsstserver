@@ -1,0 +1,3 @@
+>merge pkg=sqlite
+>self installFile=pysqlite.bld
+

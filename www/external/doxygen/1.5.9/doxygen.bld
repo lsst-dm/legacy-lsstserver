@@ -1,0 +1,11 @@
+basever=`echo $version | sed -e 's/\+[0-9][0-9]*//'`
+
+fetch external/doxygen/$version/doxygen-${basever}.src.tar.gz
+unpack_tar_and_enter doxygen-${basever}.src.tar.gz
+
+# this is a slightly different syntax from "standard" configure scripts
+echo ./configure --prefix $installdir
+./configure --prefix $installdir >> $buildlog 2>&1
+
+make
+makeinstall

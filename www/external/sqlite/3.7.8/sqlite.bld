@@ -1,0 +1,12 @@
+# LSST build script for sqlite
+#
+# This should work on Linux, Linux64, and DarwinX86
+#
+set -e
+ver=3070800
+tarfile=sqlite-autoconf-$ver.tar.gz
+
+fetch external/sqlite/$release/$tarfile
+unpack_tar_and_enter $tarfile
+
+CFLAGS="-Os" simplemake

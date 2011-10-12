@@ -1,0 +1,5 @@
+EUPS distribution manifest for minuit2 (5.22.00+1). Version 1.0
+#
+# pkg   flavor  version   tablefile                              installation_directory     installID
+#------ ------- --------- -------------------------------------- --------------
+minuit2 generic 5.22.00+1 external/minuit2/5.22.00/minuit2.table external/minuit2/5.22.00+1 lsstbuild:external/minuit2/5.22.00/minuit2.bld

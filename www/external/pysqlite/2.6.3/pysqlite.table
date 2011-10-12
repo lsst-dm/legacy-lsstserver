@@ -1,0 +1,2 @@
+setupRequired(sqlite >= 3.6.23.1)
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)

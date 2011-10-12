@@ -1,0 +1,12 @@
+# LSST build script for xpa 2.1.7b2
+#
+set -e 
+fetch external/xpa/${release}/xpa-${release}.tar.gz
+unpack_tar_and_enter xpa-${release}.tar.gz
+
+./configure --prefix=${installdir} --enable-shared=yes --with-tcl=$TCLTK_DIR/lib >> $buildlog
+make
+mkdir -p ${installdir}
+make install
+
+

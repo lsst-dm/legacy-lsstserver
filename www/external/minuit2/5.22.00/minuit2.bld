@@ -1,0 +1,11 @@
+# 
+# LSST build script for minuit2
+#
+set -e
+tarfile=Minuit2-${release}.tar.gz
+
+fetch external/minuit2/$release/$tarfile
+unpack_tar_and_enter $tarfile
+
+simplemake --disable-openmp
+

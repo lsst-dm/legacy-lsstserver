@@ -1,0 +1,10 @@
+# LSSTeups build script fo rmysqlclient
+#
+set -e
+fetch external/mysqlclient/$release/mysql-5.1.50.tar.gz
+unpack_tar_and_enter mysql-5.1.50.tar.gz
+
+simplemake --without-server --enable-thread-safe-client --enable-local-infile
+
+cd $installdir/lib
+ln -s mysql/* .

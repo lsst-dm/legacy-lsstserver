@@ -1,0 +1,10 @@
+# LSST build script for sqlite
+#
+# This should work on Linux, Linux64, and DarwinX86
+#
+tarfile=sqlite-amalgamation-$version.tar.gz
+
+fetch external/sqlite/$version/$tarfile
+unpack_tar_and_enter $tarfile
+
+CFLAGS="-Os" simplemake

@@ -1,0 +1,15 @@
+set -e
+[ -n "$SQLITE_DIR" ] || { echo sqlite appears not to be setup; false; }
+
+fetch external/pysqlite/$release/pysqlite-$release.tar.gz
+unpack_tar_and_enter pysqlite-$release.tar.gz
+
+fetch external/pysqlite/$release/setup.py
+fetch external/pysqlite/$release/sqlite.py
+
+simplepysetup
+
+echo "Installing sqlite.py..." | tee -a $buildlog
+echo cp sqlite.py $installdir/lib/python >> $buildlog
+cp sqlite.py $installdir/lib/python
+

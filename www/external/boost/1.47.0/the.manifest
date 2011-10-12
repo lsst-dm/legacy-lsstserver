@@ -1,0 +1,3 @@
+>merge pkg=python
+>merge pkg=mpich2
+>self installFile=boost.bld
