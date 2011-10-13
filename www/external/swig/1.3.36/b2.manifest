@@ -1,0 +1,5 @@
+EUPS distribution manifest for swig (1.3.36+1). Version 1.0
+#
+# pkg flavor  version  tablefile                       installation_directory installID
+#---- ------- -------- ------------------------------- ---------------------- -
+swig  generic 1.3.36+2 external/swig/1.3.36/swig.table external/swig/1.3.36+2 lsstbuild:external/swig/1.3.36/swig.bld

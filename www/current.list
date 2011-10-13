@@ -17,6 +17,7 @@ gsl              generic    1.8+1          external
 libpng           generic    1.2.35+1       external
 matplotlib       generic    1.0.1+2        external
 minuit2          generic    5.22.00+1      external    
+mpfr             generic    2.4.2+1        external    
 mpich2           generic    1.0.8+2        external    
 mysqlclient      generic    5.1.50+1       external    
 mysqlpython      generic    1.2.3+2        external    

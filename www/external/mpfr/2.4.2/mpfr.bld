@@ -1,0 +1,7 @@
+# LSSTeups build script for mpfr
+#
+set -e
+fetch external/mpfr/$release/mpfr-$release.tar.gz
+unpack_tar_and_enter mpfr-$release.tar.gz
+
+simplemake --enable-languages=c,c++,fortran

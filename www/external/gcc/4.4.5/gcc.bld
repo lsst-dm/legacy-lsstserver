@@ -1,0 +1,47 @@
+# Building gcc (and g++)
+#
+set -e
+
+gmp=gmp-4.3.2
+mpfrver=2.4.2
+mpfr=mpfr-$mpfrver
+
+fetch external/gcc/$release/gcc-$release.tar.gz
+fetch external/gcc/$release/$gmp.tar.gz
+fetch external/mpfr/$mpfrver/$mpfr.tar.gz
+
+unpack_tar_and_enter gcc-$release.tar.gz
+srcpkg=$PWD
+
+echo tar xzf ../$gmp.tar.gz \&\& mv $gmp gmp
+tar xzf ../$gmp.tar.gz
+mv $gmp gmp
+echo tar xzf ../$mpfr.tar.gz \&\& mv $mpfr mpfr
+tar xzf ../$mpfr.tar.gz 
+mv $mpfr mpfr
+
+cd ..
+mkdir gcc-build
+cd gcc-build
+
+echo $srcpkg/configure --prefix=$installdir --enable-languages=c,c++,fortran,objc,obj-c++ >> $buildlog
+$srcpkg/configure --prefix=$installdir --enable-languages=c,c++,fortran,objc,obj-c++ >> $buildlog 2>&1
+
+# see how much we can parallelize (on Linux)
+para="-j 2"
+[ -e /proc/cpuinfo ] && {
+    nproc=`grep '^processor' /proc/cpuinfo | sort -r | head -1 | sed -e 's/^.*: //'`
+    ncores=`grep '^cpu cores' /proc/cpuinfo | head -1 | sed -e 's/^.*: //'`
+    [ -n "$nproc" -a -n "$ncores" ] && {
+        totcores=$(( ($nproc + 1) * $ncores ))
+        if [ "$totcores" -gt 4 ]; then
+            para="-j 6"
+        elif [ "$totcores" -gt 2 ]; then
+            para="-j 4"
+        fi
+    }
+}
+
+make $para
+make install
+
