@@ -41,9 +41,9 @@ zlib             generic    1.2.5+1        external
 # cat              generic    4.5.1.0+2
 # daf_base         generic    4.4.0.1+2                  
 # daf_persistence  generic    4.5.0.2+2                  
-lsst             generic    4.4.0.1+4
+lsst             generic    4.6.0.0+1
 lssteups         generic    4.6.0.0+1
-# sconsUtils       generic    3.4.5+2
+sconsUtils       generic    4.6.0.2+1
 # pex_exceptions   generic    4.5.0.0+1                  
 # pex_logging      generic    4.5.0.1+2                  
 # pex_policy       generic    4.5.0.1+2                  
