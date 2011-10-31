@@ -9,8 +9,8 @@ tarfile=boost_$vstr.tar.gz
 fetch external/boost/$release/$tarfile
 unpack_tar_and_enter $tarfile
 
-echo ./bootstrap.sh --prefix=$installdir | tee -a $buildlog
-./bootstrap.sh --prefix=$installdir >> $buildlog 2>&1 || {
+echo ./bootstrap.sh --without-libraries=mpi --prefix=$installdir | tee -a $buildlog
+./bootstrap.sh --without-libraries=mpi --prefix=$installdir >> $buildlog 2>&1 || {
     echo "Boost Bootstrap..."
     tail -20 $buildlog
     echo "$prog: bootstrap failed; see $PWD/$buildlog for details"
@@ -32,8 +32,8 @@ para=-j2
     }
 }
 
-echo ./bjam $para install | tee -a $buildlog
-./bjam $para install >> $buildlog 2>&1 || {
+echo ./b2 $para --without-mpi install | tee -a $buildlog
+./b2 $para --without-mpi install >> $buildlog 2>&1 || {
     echo "bjam install ..."
     tail -20 $buildlog
     echo "$prog: bjam failed; see $PWD/$buildlog for details"
