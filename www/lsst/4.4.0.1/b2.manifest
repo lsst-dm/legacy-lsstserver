@@ -4,8 +4,7 @@ EUPS distribution manifest for lsst (4.4.0.1+2). Version 1.0
 #----------- ------- --------- ---------------------------------------------- ----------------------------- -
 tcltk        generic 8.5.9+1   external/tcltk/8.5.9/tcltk.table               external/tcltk/8.5.9+1        lsstbuild:external/tcltk/8.5.9/tcltk.bld
 python       generic 2.7.2+2   external/python/2.7.2/python.table             external/python/2.7.2+2       lsstbuild:external/python/2.7.2/python+2.bld
-sconsDistrib generic 2.1.0+2   external/sconsDistrib/2.1.0/sconsDistrib.table external/sconsDistrib/1.1.0+1 lsstbuild:external/sconsDistrib/2.1.0/sconsDistrib.bld
+scons        generic 2.1.0+2   external/scons/2.1.0/scons.table               external/scons/2.1.0+1        lsstbuild:external/scons/2.1.0/scons.bld
 sconsUtils   generic 3.4.5+2   sconsUtils/3.4.5/sconsUtils.table              sconsUtils/3.4.5+2            lsstbuild:sconsUtils/3.4.5/sconsUtils.bld
-scons        generic 3.4.5+2   sconsUtils/3.4.5/scons.table                   sconsUtils/3.4.5+2            lsstbuild:scons/3.4.5/scons.bld
 lssteups     generic 4.4.0.1+1 lssteups/4.4.0.1/lssteups.table                lssteups/4.4.0.1+1            lsstbuild:lssteups/4.4.0.1/lssteups-4.4.0.1.tar.gz
 lsst         generic 4.4.0.1+2 lsst/4.4.0.1/lsst.table                        lsst/4.4.0.1+2                lsstbuild:lsst/4.4.0.1/lsst-4.4.0.1.tar.gz
