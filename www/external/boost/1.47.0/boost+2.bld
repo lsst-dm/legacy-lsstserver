@@ -42,4 +42,7 @@ echo ./b2 $para --without-mpi install | tee -a $buildlog
 
 cd $builddir
 
-
+fetch external/boost/$release/cfg.tar.gz
+unpack_tar_and_enter cfg.tar.gz
+mkdir -p $installdir/ups
+cp *.cfg $installdir/ups
