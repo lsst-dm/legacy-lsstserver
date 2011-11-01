@@ -22,5 +22,4 @@ unpack_tar_and_enter $aprutiltar
 
 CFLAGS=-fPIC simplemake --disable-shared --with-apr=$installdir
 
-
-
+fetch_cfg

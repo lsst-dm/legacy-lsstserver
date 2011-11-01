@@ -9,4 +9,4 @@ make
 mkdir -p ${installdir}
 make install
 
-
+fetch_cfg

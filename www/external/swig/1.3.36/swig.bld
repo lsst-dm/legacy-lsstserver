@@ -15,4 +15,6 @@ mv python-patched.cxx Source/Modules/python.cxx
 fetch external/swig/${release}/shared_ptr-patched.i
 mv shared_ptr-patched.i Lib/shared_ptr.i
 
+fetch_cfg
+
 simplemake --without-php4

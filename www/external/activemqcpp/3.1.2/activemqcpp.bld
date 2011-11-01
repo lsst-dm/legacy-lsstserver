@@ -20,6 +20,8 @@ echo "Adjusting the location of include files..." | tee -a $buildlog
 echo mv $installdir/include/activemq-cpp-*/* $installdir/include >> $buildlog 2>&1
 mv $installdir/include/activemq-cpp-*/* $installdir/include 2>&1 | tee -a $buildlog
 
+fetch_cfg
+
 echo "Making and installing documentation..." | tee -a $buildlog
 echo make doxygen-run | tee -a $buildlog
 make doxygen-run >> $buildlog 2>&1 

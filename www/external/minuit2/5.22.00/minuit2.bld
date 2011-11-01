@@ -9,3 +9,4 @@ unpack_tar_and_enter $tarfile
 
 simplemake --disable-openmp
 
+fetch_cfg

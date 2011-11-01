@@ -10,6 +10,8 @@ doconfig --enable-shared
 make
 makeinstall
 
+fetch_cfg
+
 # enable setuptools
 echo installing ez_setup.py... | tee -a $buildlog
 fetch external/python/$release/ez_setup.py

@@ -4,9 +4,10 @@
 #
 tarfile=astrometry.net-0.30.tar.gz
 
-fetch external/astrometry_net/$version/$tarfile
+fetch external/astrometry_net/$release/$tarfile
 unpack_tar_and_enter $tarfile
+
+fetch_cfg
 
 make 
 INSTALL_DIR=$installdir makeinstall
-

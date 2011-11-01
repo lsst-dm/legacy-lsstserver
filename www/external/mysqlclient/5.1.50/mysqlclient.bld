@@ -6,5 +6,7 @@ unpack_tar_and_enter mysql-5.1.50.tar.gz
 
 simplemake --without-server --enable-thread-safe-client --enable-local-infile
 
+fetch_cfg
+
 cd $installdir/lib
 ln -s mysql/* .

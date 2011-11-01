@@ -11,3 +11,5 @@ doconfig --with-cfitsioinc=$CFITSIO_DIR/include --with-cfitsiolib=$CFITSIO_DIR/l
 
 make
 make install
+
+fetch_cfg
