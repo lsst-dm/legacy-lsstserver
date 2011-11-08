@@ -7,7 +7,7 @@
 # set -x
 SHELL=/bin/bash
 LSST_HOME=$PWD
-export EUPS_PKGROOT=http://lsstdev.ncsa.uiuc.edu/pkgs/test/dc4
+export EUPS_PKGROOT=http://dev.lsstcorp.org/pkgs/test/jbosch
 export SVNROOT=svn+ssh://svn.lsstcorp.org
 owneups=
 httpget=

@@ -2,4 +2,5 @@ EUPS distribution current version list. Version 1.0
 #
 # pkg            flavor     version        extra_dir  pkg_dir
 #--------------  ---------  -------------  ---------  --------------
-lssteups         generic    4.4.0.1+1
+lssteups         generic    4.6.0.0+1
+lsst             generic    4.6.0.2+1
