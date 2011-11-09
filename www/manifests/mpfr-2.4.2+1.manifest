@@ -1,5 +1,0 @@
-EUPS distribution manifest for mpfr (2.4.2). Version 1.0
-#
-# pkg flavor  version tablefile                      installation_directory installID
-#---- ------- ------- ------------------------------ ---------------------- ---
-mpfr  generic 2.4.2+1 external/mpfr/2.4.2/mpfr.table external/mpfr/2.4.2+1  lsstbuild:external/mpfr/2.4.2/mpfr.bld

@@ -1,5 +1,0 @@
-EUPS distribution manifest for boost (4.4.5+1). Version 1.0
-#
-# pkg  flavor  version  tablefile                    installation_directory  installID
-#----- ------- -------- ---------------------------- ----------------------- -------------------------
-gcc    generic 4.4.5+1  external/gcc/4.4.5/gcc.table external/gcc/4.4.5+1    lsstbuild:external/gcc/4.4.5/gcc.bld

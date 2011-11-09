@@ -1,0 +1,22 @@
+This represent's Jim Bosch's attempt to make a version-controlled web server
+for LSST third-party and devenv packages.  The 'www' directory is intended
+to be the root of the web server.
+
+Below are a few notes on how things are implemented.  Some of these may differ from how Ray's
+trunk lsstserver currently works.
+
+ - The "released" manifests in in www/manifests are symlinks to the bN.manifest files
+   in each package directory.  These symlinks will be created by a script that releases
+   packages.
+
+ - Tarballs for LSST-controlled packages are not version-controlled here; the same script
+   that releases a manifest will make the appropriate tarball from the source repository.
+
+ - When a package is released, its directory and all contents are marked as read-only.
+
+ - When possible, .bld and .cfg files are symlinked from the previous version of the same
+   package.
+
+ - .cfg and .table files for third-party packages are version-controlled both here and
+   in devenv/buildFiles.  It's not possible now to make either symlink to the other,
+   so I hope to add some scripts to aid in diffing them and keeping them synchronized.
