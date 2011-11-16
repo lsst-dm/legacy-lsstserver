@@ -1,0 +1,165 @@
+
+# /www/bootstrap/
+/www/bootstrap/*.tar.gz
+
+# /www/external/activemq/5.3.2/
+/www/external/activemq/5.3.2/*.tar.gz
+
+# /www/external/activemqcpp/3.1.2/
+/www/external/activemqcpp/3.1.2/*.tar.gz
+
+# /www/external/apr/1.3.3/
+/www/external/apr/1.3.3/*.tar.gz
+
+# /www/external/astrometry_net/0.30/
+/www/external/astrometry_net/0.30/*.tar.gz
+
+# /www/external/boost/1.47.0/
+/www/external/boost/1.47.0/*.tar.gz
+
+# /www/external/boost_mpi/1.47.0/
+/www/external/boost_mpi/1.47.0/*.tar.gz
+
+# /www/external/cfitsio/3260/
+/www/external/cfitsio/3260/*.tar.gz
+
+# /www/external/doxygen/1.5.9/
+/www/external/doxygen/1.5.9/*.tar.gz
+
+# /www/external/doxygen/1.7.5.1/
+/www/external/doxygen/1.7.5.1/*.tar.gz
+
+# /www/external/eigen/2.0.16/
+/www/external/eigen/2.0.16/*.tar.gz
+
+# /www/external/eigen/3.0.2/
+/www/external/eigen/3.0.2/*.tar.gz
+
+# /www/external/eups/
+/www/external/eups/*.tar.gz
+
+# /www/external/eups/1.2.19/
+/www/external/eups/1.2.19/*.tar.gz
+
+# /www/external/eups/1.2.20/
+/www/external/eups/1.2.20/*.tar.gz
+
+# /www/external/eups/1.2.23/
+/www/external/eups/1.2.23/*.tar.gz
+
+# /www/external/fftw/3.1.2/
+/www/external/fftw/3.1.2/*.tar.gz
+
+# /www/external/fftw/3.3/
+/www/external/fftw/3.3/*.tar.gz
+
+# /www/external/freetype/2.3.8/
+/www/external/freetype/2.3.8/*.tar.gz
+
+# /www/external/gcc/4.4.5/
+/www/external/gcc/4.4.5/*.tar.gz
+
+# /www/external/gsl/1.15/
+/www/external/gsl/1.15/*.tar.gz
+
+# /www/external/gsl/1.8/
+/www/external/gsl/1.8/*.tar.gz
+
+# /www/external/libpng/1.2.35/
+/www/external/libpng/1.2.35/*.tar.gz
+
+# /www/external/matplotlib/1.0.1/
+/www/external/matplotlib/1.0.1/*.tar.gz
+
+# /www/external/minuit2/5.22.00/
+/www/external/minuit2/5.22.00/*.tar.gz
+
+# /www/external/mpfr/2.4.2/
+/www/external/mpfr/2.4.2/*.tar.gz
+
+# /www/external/mpich2/1.0.8/
+/www/external/mpich2/1.0.8/*.tar.gz
+
+# /www/external/mysqlclient/5.1.50/
+/www/external/mysqlclient/5.1.50/*.tar.gz
+
+# /www/external/mysqlpython/1.2.3/
+/www/external/mysqlpython/1.2.3/*.tar.gz
+
+# /www/external/numpy/1.6.1/
+/www/external/numpy/1.6.1/*.tar.gz
+
+# /www/external/pyfits/2.2.2/
+/www/external/pyfits/2.2.2/*.tar.gz
+
+# /www/external/pyfits/2.4.0/
+/www/external/pyfits/2.4.0/*.tar.gz
+
+# /www/external/pysqlite/2.6.3/
+/www/external/pysqlite/2.6.3/*.tar.gz
+
+# /www/external/python/2.7.1/
+/www/external/python/2.7.1/*.tgz
+
+# /www/external/python/2.7.2/
+/www/external/python/2.7.2/*.tgz
+
+# /www/external/scipy/0.9.0/
+/www/external/scipy/0.9.0/*.tar.gz
+
+# /www/external/scisql/0.1/
+/www/external/scisql/0.1/*.tar.gz
+
+# /www/external/scons/2.1.0/
+/www/external/scons/2.1.0/*.tar.gz
+
+# /www/external/sqlite/3.6.23.1/
+/www/external/sqlite/3.6.23.1/*.tar.gz
+
+# /www/external/sqlite/3.7.8/
+/www/external/sqlite/3.7.8/*.tar.gz
+
+# /www/external/swig/1.3.36/
+/www/external/swig/1.3.36/*.tar.gz
+
+# /www/external/swig/2.0.4/
+/www/external/swig/2.0.4/*.tar.gz
+
+# /www/external/tcltk/8.5.9/
+/www/external/tcltk/8.5.9/*.tar.gz
+
+# /www/external/wcslib/4.4.4/
+/www/external/wcslib/4.4.4/*.tar.bz2
+
+# /www/external/wcslib/4.8.2/
+/www/external/wcslib/4.8.2/*.tar.bz2
+
+# /www/external/xpa/2.1.13/
+/www/external/xpa/2.1.13/*.tar.gz
+
+# /www/external/zlib/1.2.5/
+/www/external/zlib/1.2.5/*.tar.gz
+
+# /www/lsst/1.0.2/
+/www/lsst/1.0.2/*.tar.gz
+
+# /www/lsst/4.4.0.1/
+/www/lsst/4.4.0.1/*.tar.gz
+
+# /www/lssteups/1.2/
+/www/lssteups/1.2/*.tar.gz
+
+# /www/lssteups/4.4.0.1/
+/www/lssteups/4.4.0.1/*.tar.gz
+
+# /www/lssteups/4.5.0.1/
+/www/lssteups/4.5.0.1/*.tar.gz
+
+# /www/lssteups/4.6.0.0/
+/www/lssteups/4.6.0.0/*.tar.gz
+
+# /www/sconsUtils/3.4.5/
+/www/sconsUtils/3.4.5/*.tar.gz
+
+# /www/sconsUtils/4.6.0.2/
+/www/sconsUtils/4.6.0.2/*.tar.gz
