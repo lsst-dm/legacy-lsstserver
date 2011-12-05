@@ -40,31 +40,15 @@ def generate(env):
         env['NVCC'] = 'nvcc'
 
         # default flags for the NVCC compiler
-        env['NVCCFLAGS'] = ['']
-        env['STATICNVCCFLAGS'] = ['']
-        env['SHAREDNVCCFLAGS'] = ['']
+        env['NVCCFLAGS'] = ''
+        env['STATICNVCCFLAGS'] = ''
+        env['SHAREDNVCCFLAGS'] = ''
         env['ENABLESHAREDNVCCFLAG'] = '-shared'
 	env['NVCCCMDLINE'] = ''
 
         # default NVCC commands
-        env['STATICNVCCCMD'] = '$NVCC -o $TARGET -c $NVCCFLAGS $STATICNVCCFLAGS $NVCCCMDLINE $SOURCES'
-        env['SHAREDNVCCCMD'] = '$NVCC -o $TARGET -c $NVCCFLAGS $SHAREDNVCCFLAGS $ENABLESHAREDNVCCFLAG $NVCCCMDLINE $SOURCES'
-
-        # cuda libraries
-        if env['PLATFORM'] == 'posix':
-                cudaSDKSubLibDir = '/linux'
-        elif env['PLATFORM'] == 'darwin':
-                cudaSDKSubLibDir = '/darwin'
-        else:
-                cudaSDKSubLibDir = ''
-
-        # add nvcc to PATH
-        env.PrependENVPath('PATH', cudaToolkitPath + '/bin')
-
-        # add required libraries
-        env.Append(CPPPATH=[cudaSDKPath + '/common/inc', cudaToolkitPath + '/include'])
-        env.Append(LIBPATH=[cudaSDKPath + '/lib', cudaSDKPath + '/common/lib' + cudaSDKSubLibDir, cudaToolkitPath + '/lib64', cudaToolkitPath + '/lib'])
-        env.Append(LIBS=['cudart'])
+        env['STATICNVCCCMD'] = '$NVCC -o $TARGET -c $NVCCFLAGS $_CPPINCFLAGS $STATICNVCCFLAGS $NVCCCMDLINE $SOURCES'
+        env['SHAREDNVCCCMD'] = '$NVCC -o $TARGET -c $NVCCFLAGS $_CPPINCFLAGS $SHAREDNVCCFLAGS $ENABLESHAREDNVCCFLAG $NVCCCMDLINE $SOURCES'
 
 def exists(env):
         return env.Detect('nvcc')
