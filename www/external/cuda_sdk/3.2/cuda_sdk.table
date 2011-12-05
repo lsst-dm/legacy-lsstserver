@@ -1,0 +1,4 @@
+setupRequired(cuda_toolkit)
+
+envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/shared/lib)
+envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/shared/lib)
