@@ -19,13 +19,13 @@ def CUDANVCCStaticObjectEmitter(target, source, env):
         tgt, src = SCons.Defaults.StaticObjectEmitter(target, source, env)
         for file in src:
                 lifile = os.path.splitext(src[0].rstr())[0] + '.linkinfo'
-                tgt.append(lifile)
+                #tgt.append(lifile)
         return tgt, src
 def CUDANVCCSharedObjectEmitter(target, source, env):
         tgt, src = SCons.Defaults.SharedObjectEmitter(target, source, env)
         for file in src:
                 lifile = os.path.splitext(src[0].rstr())[0] + '.linkinfo'
-                tgt.append(lifile)
+                #tgt.append(lifile)
         return tgt, src
 
 def generate(env):
