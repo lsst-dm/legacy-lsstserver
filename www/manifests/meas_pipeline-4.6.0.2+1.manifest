@@ -13,7 +13,6 @@ doxygen         generic      1.7.5.1+1  doxygen/1.7.5.1/doxygen.table doxygen/1.
 eigen           generic      3.0.2+1    eigen/3.0.2/eigen.table   eigen/3.0.2+1                  lsstbuild:eigen/3.0.2/eigen-3.0.2.tar.gz
 fftw            generic      3.1.2+1    fftw/3.1.2/fftw.table     fftw/3.1.2+1                   lsstbuild:fftw/3.1.2/fftw-3.1.2.tar.gz
 freetype        generic      2.3.8+1    freetype/2.3.8/freetype.table freetype/2.3.8+1               lsstbuild:freetype/2.3.8/freetype-2.3.8.tar.gz
-gcc             generic      4.4.5+1    gcc/4.4.5/gcc.table       gcc/4.4.5+1                    lsstbuild:gcc/4.4.5/gcc-4.4.5.tar.gz
 gsl             generic      1.15+1     gsl/1.15/gsl.table        gsl/1.15+1                     lsstbuild:gsl/1.15/gsl-1.15.tar.gz
 libpng          generic      1.2.35+1   libpng/1.2.35/libpng.table libpng/1.2.35+1                lsstbuild:libpng/1.2.35/libpng-1.2.35.tar.gz
 minuit2         generic      5.22.00+1  minuit2/5.22.00/minuit2.table minuit2/5.22.00+1              lsstbuild:minuit2/5.22.00/minuit2-5.22.00.tar.gz

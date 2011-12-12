@@ -1,7 +1,7 @@
 # LSST build script for swig 2.x
 
 fetch external/swig/$release/swig-${release}.tar.gz
-unpack_tar_and_enter external/swig/$release/swig-${release}.tar.gz
+unpack_tar_and_enter swig-${release}.tar.gz
 
 simplemake --without-php4
 

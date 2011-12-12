@@ -7,7 +7,6 @@ cfitsio         generic 3260+1    external/cfitsio/3260/cfitsio.table           
 doxygen         generic 1.7.5.1+1 doxygen/1.7.5.1/doxygen.table                 doxygen/1.7.5.1+1             lsstbuild:doxygen/1.7.5.1/doxygen-1.7.5.1.tar.gz
 eigen           generic 3.0.2+1   external/eigen/3.0.2/eigen.table              external/eigen/3.0.2+1        lsstbuild:external/eigen/3.0.2/eigen.bld
 fftw            generic 3.1.2+1   external/fftw/3.1.2/fftw.table                external/fftw/3.1.2+1         lsstbuild:external/fftw/3.1.2/fftw.bld
-gcc             generic 4.4.5+1   external/gcc/4.4.5/gcc.table                  external/gcc/4.4.5+1          lsstbuild:external/gcc/4.4.5/gcc.bld
 gsl             generic 1.15+1    external/gsl/1.15/gsl.table                   external/gsl/1.15+1           lsstbuild:external/gsl/1.15/gsl-1.15.tar.gz
 minuit2         generic 5.22.00+1 external/minuit2/5.22.00/minuit2.table        external/minuit2/5.22.00+1    lsstbuild:external/minuit2/5.22.00/minuit2.bld
 mysqlclient     generic 5.1.50+1  external/mysqlclient/5.1.50/mysqlclient.table external/mysqlclient/5.1.50+1 lsstbuild:external/mysqlclient/5.1.50/mysqlclient.bld

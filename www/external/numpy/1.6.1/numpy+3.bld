@@ -1,0 +1,16 @@
+# lsst build script for numpy
+# 
+set -e
+fetch external/numpy/$release/numpy-${release}.tar.gz
+
+unpack_tar_and_enter numpy-${release}.tar.gz
+
+echo python setup.py build --fcompiler=gnu95 | tee -a $buildlog
+python setup.py build --fcompiler=gnu95 >> $buildlog 2>&1 
+simplepysetup
+
+fetch_cfg
+
+# make include files more accessible
+echo cd $installdir \&\& ln -s lib/python/numpy/core/include include >> $buildlog
+cd $installdir && ln -s lib/python/numpy/core/include include 2>&1 | tee -a $buildlog
