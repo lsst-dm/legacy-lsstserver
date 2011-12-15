@@ -14,7 +14,7 @@ boost_mpi        generic    1.47.0+3       external
 cfitsio          generic    3260+1         external    
 doxygen          generic    1.7.5.1+1      external    
 eigen            generic    3.0.2+1        external    
-eups             generic    1.2.27         external
+eups             generic    1.2.29         external                 
 fftw             generic    3.1.2+1        external
 freetype         generic    2.3.8+1        external
 gcc              generic    4.4.5+1        external
