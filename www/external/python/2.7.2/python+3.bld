@@ -1,0 +1,25 @@
+[ -n "$TCLTK_DIR" ] || { echo TclTk appears not to be setup; false; }
+
+fetch external/python/$release/Python-${release}.tgz
+unpack_tar_and_enter Python-${release}.tgz
+
+fetch external/python/$release/lsstMkSetup.sh
+bash lsstMkSetup.sh
+
+if { eups flavor | grep -qs Darwin; }; then
+    export LDFLAGS=-L/usr/X11/lib
+fi
+
+doconfig --enable-shared
+make
+makeinstall
+
+fetch_cfg
+
+# enable setuptools
+echo installing ez_setup.py... | tee -a $buildlog
+fetch external/python/$release/ez_setup.py
+
+LD_LIBRARY_PATH=$installdir/lib:$LD_LIBRARY_PATH
+echo $installdir/bin/python ez_setup.py >> $buildlog
+$installdir/bin/python ez_setup.py
