@@ -1,6 +1,7 @@
 # Building gcc (and g++)
 #
 set -e
+flavor=`eups flavor`
 
 gmp=gmp-4.3.2
 mpfrver=2.4.2
@@ -24,11 +25,12 @@ cd ..
 mkdir gcc-build
 cd gcc-build
 
-echo $srcpkg/configure --prefix=$installdir --enable-languages=c,c++,fortran,objc,obj-c++ >> $buildlog
+echo $srcpkg/configure --prefix=$installdir --enable-languages=c,c++,fortran,objc,obj-c++ | tee -a $buildlog
 $srcpkg/configure --prefix=$installdir --enable-languages=c,c++,fortran,objc,obj-c++ >> $buildlog 2>&1
 
 # see how much we can parallelize (on Linux)
 para="-j 2"
+{ echo "$flavor" | grep -sq '^Darwin'; } && para=
 [ -e /proc/cpuinfo ] && {
     nproc=`grep '^processor' /proc/cpuinfo | sort -r | head -1 | sed -e 's/^.*: //'`
     ncores=`grep '^cpu cores' /proc/cpuinfo | head -1 | sed -e 's/^.*: //'`

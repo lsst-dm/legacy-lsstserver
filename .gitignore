@@ -24,8 +24,11 @@ www/ndarray
 www/sconsUtils
 www/lssteups
 www/lsst
+www/devenv_*
+www/testing_*
 
 build
 pkgs
 ref*
 test
+submitRelease

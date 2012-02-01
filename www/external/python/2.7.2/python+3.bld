@@ -1,3 +1,4 @@
+set -e
 [ -n "$TCLTK_DIR" ] || { echo TclTk appears not to be setup; false; }
 
 fetch external/python/$release/Python-${release}.tgz
@@ -21,5 +22,11 @@ echo installing ez_setup.py... | tee -a $buildlog
 fetch external/python/$release/ez_setup.py
 
 LD_LIBRARY_PATH=$installdir/lib:$LD_LIBRARY_PATH
-echo $installdir/bin/python ez_setup.py >> $buildlog
-$installdir/bin/python ez_setup.py
+echo $installdir/bin/python ez_setup.py | tee -a $buildlog
+$installdir/bin/python ez_setup.py >> $buildlog 2>&1 || {
+    echo "python ez_setup ..."
+    tail -20 $buildlog
+    echo "$prog: ez_setup failed; see $PWD/$buildlog for details"
+    false
+}
+

@@ -4,7 +4,7 @@ EUPS distribution current version list. Version 1.0
 # pkg            flavor     version        extra_dir  pkg_dir
 #--------------  ---------  -------------  ---------  --------------
 #
-# external
+# [external]
 #
 apr              generic    1.3.3+1        external    
 activemqcpp      generic    3.1.2+1        external    
@@ -14,7 +14,7 @@ boost_mpi        generic    1.47.0+3       external
 cfitsio          generic    3260+1         external    
 doxygen          generic    1.7.5.1+1      external    
 eigen            generic    3.0.2+1        external    
-eups             generic    1.2.29         external                 
+eups             generic    1.2.30         external                 
 fftw             generic    3.1.2+1        external
 freetype         generic    2.3.8+1        external
 gcc              generic    4.4.5+1        external
@@ -40,7 +40,7 @@ wcslib           generic    4.4.4+1        external
 xpa              generic    2.1.13+1       external    
 zlib             generic    1.2.5+1        external    
 #
-# lsst
+# [lsst]
 #
 afw              generic    4.7.2.0+3                               
 ap               generic    4.7.1.0+4                               
@@ -60,9 +60,9 @@ ip_diffim        generic    4.7.1.0+4
 ip_isr           generic    4.7.1.0+4                               
 ip_pipeline      generic    4.7.1.0+4                               
 ip_utils         generic    4.7.1.0+4                               
-lsst             generic    4.7.1.2+2                               
+lsst             generic    4.7.1.2+3                               
 lsstactive       generic    4.7.0.0+5                               
-lssteups         generic    4.7.1.3+1                               
+lssteups         generic    4.7.1.4+1                               
 meas_algorithms  generic    4.7.1.0+4                               
 meas_astrom      generic    4.7.1.0+4                               
 meas_multifit    generic    4.7.1.0+4                               
@@ -81,7 +81,7 @@ skypix           generic    4.7.1.0+4
 thirdparty_core  generic    4.6.0.0+4                               
 utils            generic    4.7.1.0+2                               
 #
-# pseudo
+# [pseudo]
 #
 thirdparty_core  generic    4.6.0.0+4      pseudo                   
 lsstactive       generic    4.7.0.0+5      pseudo                   

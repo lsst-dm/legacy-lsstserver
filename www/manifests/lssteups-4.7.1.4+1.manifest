@@ -1,0 +1,9 @@
+EUPS distribution manifest for lssteups (4.7.1.4+1). Version 1.0
+#
+# Creator:      Raymond Plante
+# Time:         2011/12/19 02:14:03 CST
+# Eups version: 1.2.30
+#
+# pkg           flavor       version    tablefile                 installation_directory         installID
+#---------------------------------------------------------------------------------------------------------
+lssteups        generic      4.7.1.4+1  lssteups/4.7.1.4/lssteups.table lssteups/4.7.1.4+1             lsstbuild:lssteups/4.7.1.4/lssteups-4.7.1.4.tar.gz

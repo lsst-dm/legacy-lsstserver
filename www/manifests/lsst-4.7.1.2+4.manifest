@@ -1,0 +1,11 @@
+EUPS distribution manifest for lsst (4.7.1.2+4). Version 1.0
+#
+# pkg      flavor  version   tablefile                           installation_directory installID
+#--------- ------- --------- ----------------------------------- ---------------------- ---------------------
+doxygen    generic 1.7.5.1+1 doxygen/1.7.5.1/doxygen.table       doxygen/1.7.5.1+1      lsstbuild:doxygen/1.7.5.1/doxygen.bld
+lssteups   generic 4.7.1.4+1 lssteups/4.7.1.4/lssteups.table     lssteups/4.7.1.4+1     lsstbuild:lssteups/4.7.1.4/lssteups-4.7.1.4.tar.gz
+tcltk      generic 8.5.9+1   tcltk/8.5.9/tcltk.table             tcltk/8.5.9+1          lsstbuild:tcltk/8.5.9/tcltk.bld
+python     generic 2.7.2+3   python/2.7.2/python.table           python/2.7.2+3         lsstbuild:python/2.7.2/python+3.bld
+scons      generic 2.1.0+3   scons/2.1.0/scons.table             scons/2.1.0+3          lsstbuild:scons/2.1.0/scons.bld
+sconsUtils generic 4.7.2.1+1 sconsUtils/4.7.2.1/sconsUtils.table sconsUtils/4.7.2.1+1   lsstbuild:sconsUtils/4.7.2.1/sconsUtils-4.7.2.1.tar.gz
+lsst       generic 4.7.1.2+4 lsst/4.7.1.2/lsst.table             lsst/4.7.1.2+4         lsstbuild:lsst/4.7.1.2/lsst-4.7.1.2.tar.gz
