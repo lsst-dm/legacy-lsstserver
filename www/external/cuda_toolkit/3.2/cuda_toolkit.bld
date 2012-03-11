@@ -1,0 +1,21 @@
+# lsst build script for cuda_toolkit
+# 
+
+# The user has to help us and tell us where CUDA is installed
+[ -n "$CUDA" ] || { echo "please set the environment variable CUDA to the directory where your CUDA Toolkit resides (i.e., nvcc should be in $CUDA/bin)."; false; }
+
+# Trust, but verify...
+NVCC="$CUDA/bin/nvcc"
+test -x "$NVCC" || { echo "Error: $NVCC does not exist or isn't executable."; false; }
+
+# And check that our package version matches the toolkit version
+VERSION=$($NVCC --version | sed -n 's/^.*elease \(.*\),.*/\1/p')
+PKGVERSION=${release%+*}
+test "$VERSION" == "$PKGVERSION" || { echo "Error: This package is for CUDA v$PKGVERSION, and you have CUDA v$VERSION installed."; false; }
+
+# The install consists of setting up links to lib, bin, etc...
+fetch_cfg
+mkdir -p "$installdir" && cd "$installdir"
+for D in bin lib lib64 include; do
+	ln -s "$CUDA/$D"
+done
