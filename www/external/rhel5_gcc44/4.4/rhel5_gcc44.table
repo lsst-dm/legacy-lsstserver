@@ -1,0 +1,4 @@
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
+envSet(BLAS, None)
+envSet(LAPACK, None)
+envSet(ATLAS, None)
