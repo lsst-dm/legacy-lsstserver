@@ -36,7 +36,7 @@ function findLibLocation {
     for _path in ${_paths[*]}; do
         [ -r "$_path/lib${1}.*" ] && { echo $_path; return 0; }
     done
-    return 0
+    return 1
 }
 
 # print to standard out a -L argument for finding a particular library.
@@ -81,13 +81,15 @@ cat >> Modules/Setup.lsst <<EOF
 # The _tkinter module
 
 _tkinter _tkinter.c tkappinit.c -DWITH_APPINIT \
+	-L/usr/X11R6/lib \
 	-L$TCLTK_DIR/lib -I$TCLTK_DIR/include -I/usr/X11R6/include \
 	-ltk$tk_base_version -ltcl$tk_base_version -lX11
 
 EOF
 
 # configure readline support 
-if [ "$EUPS_FLAVOR" != Darwin* ]; then
+if [[ "$(eups flavor)" != Darwin* ]]; then
+    echo HERE
     libloc=
     lib_path_opt=
     libloc=`libLocation readline` && {
