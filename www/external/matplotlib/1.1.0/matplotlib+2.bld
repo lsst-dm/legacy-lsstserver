@@ -9,5 +9,11 @@ fetch external/matplotlib/$release/setupext.py
 echo "Getting customized setup.cfg..." >> $buildlog
 fetch external/matplotlib/$release/setup.cfg
 
+C=$(basename "$CC")
+[ "${C:0:5}" == "clang" ] && {
+	fetch external/matplotlib/$release/clang-fix.patch
+	patch -p1 < clang-fix.patch
+}
+
 pysetup --home=$installdir
 
