@@ -10,5 +10,12 @@ unpack_tar_and_enter $tarfile
 
 fetch_cfg
 
+C=$(basename "$CC")
+[ "${C:0:5}" == "clang" ] && {
+    export CFLAGS="$CFLAGS -std=gnu89"
+    fetch external/astrometry_net/$release/clang-make-depend-bug.patch
+    patch -p1 < clang-make-depend-bug.patch
+}
+
 make -j 1
-INSTALL_DIR=$installdir make -j 1 install
+INSTALL_DIR=$installdir makeinstall
