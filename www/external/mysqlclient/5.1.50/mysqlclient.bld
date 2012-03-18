@@ -2,7 +2,13 @@
 #
 set -e
 fetch external/mysqlclient/$release/mysql-5.1.50.tar.gz
+fetch external/mysqlclient/$release/clang-preprocessor-output-difference.patch
 unpack_tar_and_enter mysql-5.1.50.tar.gz
+
+C=$(basename "$CC")
+[ "${C:0:5}" == "clang" ] && {
+    patch -p1 < ../clang-preprocessor-output-difference.patch
+}
 
 simplemake --without-server --enable-thread-safe-client --enable-local-infile
 
