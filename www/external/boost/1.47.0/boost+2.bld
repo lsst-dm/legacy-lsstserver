@@ -32,8 +32,14 @@ para=-j2
     }
 }
 
-echo ./b2 $para --without-mpi install | tee -a $buildlog
-./b2 $para --without-mpi install >> $buildlog 2>&1 || {
+# Test for clang
+C=$(basename "$CXX")
+[ "${C:0:5}" == "clang" ] && {
+    toolset="toolset=clang"
+}
+
+echo ./b2 $para --without-mpi $toolset install | tee -a $buildlog
+./b2 $para --without-mpi $toolset install >> $buildlog 2>&1 || {
     echo "bjam install ..."
     tail -20 $buildlog
     echo "$prog: bjam failed; see $PWD/$buildlog for details"
