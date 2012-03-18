@@ -33,6 +33,8 @@ if [ -z "$httpget" ]; then
 fi
 if [ `basename $httpget` = 'wget' ]; then
     httpget="$httpget -O -"
+else
+    httpget="$httpget -f -#"
 fi
 
 
@@ -100,10 +102,10 @@ mkdir `eups flavor`
 # Mac-specific setup: mock python and gcc packages to satisfy dependencies;
 # system python will be used. Note: gcc is not supported on OSX; use clang.
 #
-[ $(uname) == "Darwin" ] && {
+[ "$(uname)" == "Darwin" ] && {
     echo "Detected Mac OS X; will use system-provided python."
     mkdir -p $EUPS_PATH/DarwinX86/python/system/ups
-    curl $EUPS_PKGROOT/external/python/2.7.2/python.cfg -o $EUPS_PATH/DarwinX86/python/system/ups/python.cfg
+    $httpget $EUPS_PKGROOT/external/python/2.7.2/python.cfg > $EUPS_PATH/DarwinX86/python/system/ups/python.cfg
     eups declare python system -r $EUPS_PATH/DarwinX86/python/system -m none
     eups declare gcc system -m none -r none
     cat > $EUPS_PATH/site/manifest.remap <<-EOF
