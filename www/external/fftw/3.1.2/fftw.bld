@@ -6,6 +6,6 @@ unpack_tar_and_enter fftw-${release}.tar.gz
 
 doconfig --disable-fortran --enable-shared
 make
-make install
+make -j1 install
 
 fetch_cfg
