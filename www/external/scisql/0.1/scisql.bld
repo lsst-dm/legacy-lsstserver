@@ -3,5 +3,11 @@
 set -e
 fetch external/scisql/$release/scisql-${release}.tar.gz
 unpack_tar_and_enter scisql-${release}.tar.gz
+
+[ ${CC:0:5} == "clang" ] && {
+    fetch external/scisql/$release/osx-endian-include.patch
+    patch -p1 < osx-endian-include.patch
+}
+
 simplemake --client-only
 
