@@ -5,7 +5,12 @@ fetch external/xpa/${release}/xpa-${release}.tar.gz
 unpack_tar_and_enter xpa-${release}.tar.gz
 
 ./configure --prefix=${installdir} --enable-shared=yes --with-tcl=$TCLTK_DIR/lib >> $buildlog
-make
+
+[ "${CC:0:5}" == "clang" -a "$(uname)" == "Linux" ] && {
+    make CFLAGS="-fPIC"
+} || {
+    make
+}
 mkdir -p ${installdir}
 make install
 
