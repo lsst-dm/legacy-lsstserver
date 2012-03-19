@@ -1,0 +1,6 @@
+EUPS distribution manifest for astrometry_net (0.30+2). Version 1.0
+#
+# pkg          flavor  version tablefile                                         installation_directory         installID
+#------------- ------- ------- ------------------------------------------------
+cfitsio        generic 3290+1  external/cfitsio/3290/cfitsio.table               external/cfitsio/3290+1        lsstbuild:external/cfitsio/3290/cfitsio.bld
+astrometry_net generic 0.30+2  external/astrometry_net/0.30/astrometry_net.table external/astrometry_net/0.30+2 lsstbuild:external/astrometry_net/0.30/astrometry_net+1.bld

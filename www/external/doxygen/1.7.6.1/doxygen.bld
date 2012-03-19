@@ -1,0 +1,11 @@
+set -e
+
+fetch external/doxygen/$release/doxygen-${release}.src.tar.gz
+unpack_tar_and_enter doxygen-${release}.src.tar.gz
+
+# this is a slightly different syntax from "standard" configure scripts
+echo ./configure --prefix $installdir
+./configure --prefix $installdir >> $buildlog 2>&1
+
+make
+makeinstall

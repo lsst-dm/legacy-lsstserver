@@ -1,0 +1,15 @@
+EUPS distribution manifest for pex_exceptions (4.8.0.0+2). Version 1.0
+#
+# Creator: LSST Software Manager
+# Time: 2012/02/20 06:05:31 CST
+# pkg          flavor  version   tablefile                                   installation_directory     installID
+#------------- ------- --------- ------------------------------------------- -------------------------- -----
+doxygen        generic 1.7.6.1+1 external/doxygen/1.7.6.1/doxygen.table      external/doxygen/1.7.6.1+1 lsstbuild:external/doxygen/1.7.6.1/doxygen.bld
+swig           generic 2.0.4+2   external/swig/2.0.4/swig.table              external/swig/2.0.4+2      lsstbuild:external/swig/2.0.4/swig+2.bld
+tcltk          generic 8.5.9+1   external/tcltk/8.5.9/tcltk.table            external/tcltk/8.5.9+1     lsstbuild:external/tcltk/8.5.9/tcltk.bld
+python         generic 2.7.2+3   external/python/2.7.2/python.table          external/python/2.7.2+3    lsstbuild:external/python/2.7.2/python+3.bld
+boost          generic 1.47.0+5  external/boost/1.47.0/boost+2.table         external/boost/1.47.0+5    lsstbuild:external/boost/1.47.0/boost+2.bld
+scons          generic 2.1.0+3   external/scons/2.1.0/scons.table            external/scons/2.1.0+3     lsstbuild:external/scons/2.1.0/scons.bld
+sconsUtils     generic 4.8.0.1+1 sconsUtils/4.8.0.1/sconsUtils.table         sconsUtils/4.8.0.1+1       lsstbuild:sconsUtils/4.8.0.1/sconsUtils-4.8.0.1.tar.gz
+base           generic 4.8.0.0+1 base/4.8.0.0/base.table                     base/4.8.0.0+1             lsstbuild:base/4.8.0.0/base-4.8.0.0.tar.gz
+pex_exceptions generic 4.8.0.0+2 pex_exceptions/4.8.0.0/pex_exceptions.table pex_exceptions/4.8.0.0+2   lsstbuild:pex_exceptions/4.8.0.0/pex_exceptions-4.8.0.0.tar.gz

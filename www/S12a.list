@@ -1,0 +1,24 @@
+EUPS distribution S12a version list. Version 1.0
+#
+#
+# pkg               flavor     version        extra_dir  pkg_dir
+#-----------------  ---------  -------------  ---------  --------------
+#
+# [external]
+#
+
+#
+# [lsst]
+#
+
+base                generic    4.8.0.0+2                               
+daf_persistence     generic    4.8.0.3+2                               
+lsst                generic    4.7.1.2+9                               
+meas_multifit       generic    4.8.0.1+5                               
+ndarray             generic    4.8.0.2+2                               
+obs_subaru          generic    4.8.0.0+6                               
+sconsUtils          generic    5.0.0.1+1                               
+#
+# [pseudo]
+#
+

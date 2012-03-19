@@ -1,0 +1,7 @@
+EUPS distribution manifest for activemqcpp (3.1.2+2). Version 1.0
+#
+# pkg       flavor  version   tablefile                                    installation_directory       installID
+#---------- ------- --------- -------------------------------------------- ----
+apr         generic 1.3.3+1   external/apr/1.3.3/apr.table                 external/apr/1.3.3+1         lsstbuild:external/apr/1.3.3/apr.bld
+doxygen     generic 1.7.6.1+1 external/doxygen/1.7.6.1/doxygen.table       external/doxygen/1.7.6.1+1   lsstbuild:external/doxygen/1.7.6.1/doxygen.bld
+activemqcpp generic 3.1.2+2   external/activemqcpp/3.1.2/activemqcpp.table external/activemqcpp/3.1.2+2 lsstbuild:external/activemqcpp/3.1.2/activemqcpp.bld
