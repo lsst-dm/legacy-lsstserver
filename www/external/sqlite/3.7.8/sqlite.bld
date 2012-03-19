@@ -9,4 +9,6 @@ tarfile=sqlite-autoconf-$ver.tar.gz
 fetch external/sqlite/$release/$tarfile
 unpack_tar_and_enter $tarfile
 
-CFLAGS="-Os" simplemake
+CFLAGS="-Os" doconfig
+CFLAGS="-Os" make
+CFLAGS="-Os" make -j1 install
