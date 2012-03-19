@@ -6,7 +6,11 @@ EUPS distribution beta version list. Version 1.0
 #
 # [external]
 #
+activemqcpp         generic    3.1.2+2        external    
 boost               generic    1.47.0+5       external                 
+cfitsio             generic    3290+1         external    
+doxygen             generic    1.7.6.1+1      external    
+gsl                 generic    1.15+1         external
 matplotlib          generic    1.1.0+3        external                 
 mysqlpython         generic    1.2.3+3        external                 
 pyfits              generic    2.4.0+4        external                 
@@ -14,51 +18,59 @@ python              generic    2.7.2+3        external
 numpy               generic    1.6.1+4        external                 
 scisql              generic    0.1+3          external                 
 scons               generic    2.1.0+3        external
+sqlite              generic    3.7.10+1       external    
 swig                generic    2.0.4+2        external
-wcslib              generic    4.9+1          external    
+wcslib              generic    4.9+2          external                 
 #
 # [lsst]
 #
-afw                 generic    4.7.3.0+3                               
-ap                  generic    4.7.3.0+3                               
-base                generic    4.7.1.0+3      
-cat                 generic    4.7.1.0+5                               
-coadd_chisquared    generic    4.7.3.0+3                               
-coadd_utils         generic    4.7.3.0+3                               
-ctrl_events         generic    4.7.3.0+3                               
-ctrl_orca           generic    4.7.1.0+5                               
-ctrl_provenance     generic    4.7.1.0+5                               
-ctrl_sched          generic    4.7.1.0+8                               
-daf_base            generic    4.7.3.0+3                               
-daf_butlerUtils     generic    4.7.1.0+7                               
-daf_persistence     generic    4.7.3.0+3                               
-datarel             generic    4.7.1.0+8                               
-devenv_servertools  generic    4.7.0.6+1                               
-geom                generic    4.7.1.0+5                               
-ip_diffim           generic    4.7.3.0+3                               
-ip_isr              generic    4.7.3.0+3                               
-ip_pipeline         generic    4.7.1.0+7                               
-ip_utils            generic    4.7.1.0+7                               
-lsst                generic    4.7.1.2+4                               
-lsstactive          generic    4.7.0.0+9                               
-meas_algorithms     generic    4.7.3.0+3                               
-meas_astrom         generic    4.7.3.0+3                               
-meas_algorithms     generic    4.7.3.0+3                               
-meas_multifit       generic    4.7.3.0+3                               
-meas_pipeline       generic    4.7.1.0+7                               
-meas_utils          generic    4.7.1.0+7                               
-ndarray             generic    4.7.1.0+4      
-obs_cfht            generic    4.7.1.0+8                               
-obs_lsstSim         generic    4.7.1.0+8                               
-pex_exceptions      generic    4.7.3.0+1                               
-pex_harness         generic    4.7.3.0+3                               
-pex_logging         generic    4.7.3.0+3                               
-pex_policy          generic    4.7.3.0+3                               
-sconsUtils          generic    4.7.2.1+1
-sdqa                generic    4.7.1.0+3                               
-skypix              generic    4.7.1.0+7                               
-utils               generic    4.7.3.2+2                               
+afw                 generic    4.8.0.1+2
+ap                  generic    4.8.0.1+5
+base                generic    4.8.0.0+1                               
+cat                 generic    4.8.0.1+3
+coadd_chisquared    generic    4.7.3.0+7
+coadd_utils         generic    4.8.1.0+4
+ctrl_events         generic    4.8.0.0+3
+ctrl_orca           generic    4.8.0.1+3
+ctrl_provenance     generic    4.7.1.0+9
+ctrl_sched          generic    4.8.0.1+4
+daf_base            generic    4.8.0.1+2                               
+daf_butlerUtils     generic    4.8.0.3+2
+daf_persistence     generic    4.8.0.1+2
+datarel             generic    4.8.0.3+3
+devenv_servertools  generic    4.8.0.1+1                               
+geom                generic    4.7.1.0+7                               
+gsl                 generic    1.15+1                                  
+ip_diffim           generic    4.7.3.0+7
+ip_isr              generic    4.8.0.2+3
+ip_pipeline         generic    4.8.0.1+4
+ip_utils            generic    4.7.1.0+11
+lsst                generic    4.7.1.2+8                               
+lsstactive          generic    4.8.0.1+5                               
+meas_algorithms     generic    4.8.0.1+2
+meas_astrom         generic    4.8.0.2+2
+meas_algorithms     generic    4.8.0.1+2
+meas_multifit       generic    4.8.0.1+3
+meas_pipeline       generic    4.8.0.0+6
+meas_utils          generic    4.8.0.2+2
+ndarray             generic    4.8.0.1+2                               
+obs_cfht            generic    4.7.1.0+13
+obs_lsstSim         generic    4.8.0.2+3
+obs_subaru          generic    4.8.0.0+3
+pex_config          generic    4.8.0.2+2
+pex_exceptions      generic    4.8.0.0+2                               
+pex_harness         generic    4.7.3.0+6
+pex_logging         generic    4.8.0.1+3
+pex_policy          generic    4.8.0.0+3
+pipe_base           generic    4.8.0.0+4
+pipe_tasks          generic    4.8.0.1+2
+sconsUtils          generic    4.8.0.1+1                               
+sdqa                generic    4.7.1.0+5                               
+skypix              generic    4.7.1.0+11
+thirdparty_core     generic    4.8.0.1+2                               
+utils               generic    4.8.0.2+1                               
 #
 # [pseudo]
 #
-lsstactive          generic    4.7.0.0+9      pseudo                   
+lsstactive          generic    4.8.0.1+7      pseudo                   
+thirdparty_core     generic    4.8.0.1+2      pseudo                   

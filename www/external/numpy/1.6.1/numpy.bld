@@ -1,5 +1,6 @@
 # lsst build script for numpy
 # 
+set -e
 fetch external/numpy/$release/numpy-${release}.tar.gz
 
 unpack_tar_and_enter numpy-${release}.tar.gz

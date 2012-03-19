@@ -2,6 +2,7 @@
 #
 # This should work on Linux, Linux64, and DarwinX86
 #
+set -e
 tarfile=sqlite-amalgamation-$version.tar.gz
 
 fetch external/sqlite/$version/$tarfile

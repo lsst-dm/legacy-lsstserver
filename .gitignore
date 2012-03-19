@@ -6,6 +6,7 @@
 www/meas_*
 www/obs_*
 www/pex_*
+www/pipe_*
 www/ctrl_*
 www/coadd_*
 www/ip_*

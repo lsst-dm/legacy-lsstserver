@@ -2,6 +2,7 @@
 #
 # This should work on Linux, Linux64, and DarwinX86
 #
+set -e
 tarfile=$product-$release.tar.gz
 
 fetch external/$product/$release/$tarfile

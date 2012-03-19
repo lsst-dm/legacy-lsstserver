@@ -1,4 +1,5 @@
 #
+set -e
 [ -n "$CFITSIO_DIR" ] || {
     echo "cfitsio package is not setup"
     false
@@ -9,7 +10,7 @@ cd wcslib-$release
 
 doconfig --with-cfitsioinc=$CFITSIO_DIR/include --with-cfitsiolib=$CFITSIO_DIR/lib --disable-fortran
 
-make
-make install
+make -j 1
+make -j 1 install
 
 fetch_cfg

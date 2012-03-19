@@ -1,4 +1,0 @@
-EUPS distribution manifest for eups (1.2.29). Version 1.0
-# pkg flavor  version tablefile installation_directory installID
-#---- ------- ------- --------- ---------------------- --------------
-eups  generic 1.2.29  none      ../eups/1.2.29         lsstbuild:external/eups/1.2.29/eups.bld

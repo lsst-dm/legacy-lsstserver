@@ -1,3 +1,4 @@
+set -e
 [ -n "$TCLTK_DIR" ] || { echo TclTk appears not to be setup; false; }
 
 fetch external/python/$release/Python-${release}.tgz

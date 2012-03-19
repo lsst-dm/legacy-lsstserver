@@ -1,3 +1,4 @@
+set -e
 [ -n "$LSST_HOME" ] || { echo "LSST_HOME is not set!"; false; }
 
 fetch external/eups/$version/eups-${version}.tar.gz
