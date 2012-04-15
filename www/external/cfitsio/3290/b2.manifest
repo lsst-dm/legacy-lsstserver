@@ -1,0 +1,5 @@
+EUPS distribution manifest for cfitsio (3290+2). Version 1.0
+#
+# pkg   flavor  version tablefile                             installation_directory  installID
+#------ ------- ------- ------------------------------------- -------------------
+cfitsio generic 3290+2  external/cfitsio/3290/cfitsio+2.table external/cfitsio/3290+2 lsstbuild:external/cfitsio/3290/cfitsio.bld
