@@ -1,0 +1,13 @@
+EUPS distribution manifest for base (4.8.0.0+7). Version 1.0
+#
+# Creator: LSST Software Manager
+# Time: 2012/04/15 06:33:24 CDT
+# pkg      flavor  version   tablefile                              installation_directory     installID
+#--------- ------- --------- -------------------------------------- -------------------------- --------------
+doxygen    generic 1.7.6.1+1 external/doxygen/1.7.6.1/doxygen.table external/doxygen/1.7.6.1+1 lsstbuild:external/doxygen/1.7.6.1/doxygen.bld
+tcltk      generic 8.5.9+1   external/tcltk/8.5.9/tcltk.table       external/tcltk/8.5.9+1     lsstbuild:external/tcltk/8.5.9/tcltk.bld
+python     generic 2.7.2+3   external/python/2.7.2/python.table     external/python/2.7.2+3    lsstbuild:external/python/2.7.2/python+3.bld
+boost      generic 1.47.0+6  external/boost/1.47.0/boost+2.table    external/boost/1.47.0+6    lsstbuild:external/boost/1.47.0/boost+6.bld
+scons      generic 2.1.0+3   external/scons/2.1.0/scons.table       external/scons/2.1.0+3     lsstbuild:external/scons/2.1.0/scons.bld
+sconsUtils generic 5.0.0.2+1 sconsUtils/5.0.0.2/sconsUtils.table    sconsUtils/5.0.0.2+1       lsstbuild:sconsUtils/5.0.0.2/sconsUtils-5.0.0.2.tar.gz
+base       generic 4.8.0.0+7 base/4.8.0.0/base.table                base/4.8.0.0+7             lsstbuild:base/4.8.0.0/base-4.8.0.0.tar.gz

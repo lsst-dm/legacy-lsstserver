@@ -1,0 +1,8 @@
+EUPS distribution manifest for wcslib (4.9+4). Version 1.0
+#
+# Creator: LSST Software Manager
+# Time: 2012/04/15 06:40:17 CDT
+# pkg   flavor  version tablefile                             installation_directory  installID
+#------ ------- ------- ------------------------------------- ----------------------- -----------------------
+cfitsio generic 3290+2  external/cfitsio/3290/cfitsio+2.table external/cfitsio/3290+2 lsstbuild:external/cfitsio/3290/cfitsio.bld
+wcslib  generic 4.9+4   external/wcslib/4.9/wcslib.table      external/wcslib/4.9+4   lsstbuild:external/wcslib/4.9/wcslib.bld

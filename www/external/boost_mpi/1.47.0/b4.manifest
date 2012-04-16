@@ -1,0 +1,11 @@
+EUPS distribution manifest for boost_mpi (1.47.0+4). Version 1.0
+#
+# Creator: LSST Software Manager
+# Time: 2012/04/15 06:40:16 CDT
+# pkg     flavor  version  tablefile                                 installation_directory      installID
+#-------- ------- -------- ----------------------------------------- --------------------------- ------------
+tcltk     generic 8.5.9+1  external/tcltk/8.5.9/tcltk.table          external/tcltk/8.5.9+1      lsstbuild:external/tcltk/8.5.9/tcltk.bld
+python    generic 2.7.2+3  external/python/2.7.2/python.table        external/python/2.7.2+3     lsstbuild:external/python/2.7.2/python+3.bld
+mpich2    generic 1.0.8+2  external/mpich2/1.0.8/mpich2.table        external/mpich2/1.0.8+2     lsstbuild:external/mpich2/1.0.8/mpich2.bld
+boost     generic 1.47.0+6 external/boost/1.47.0/boost+2.table       external/boost/1.47.0+6     lsstbuild:external/boost/1.47.0/boost+6.bld
+boost_mpi generic 1.47.0+4 external/boost_mpi/1.47.0/boost_mpi.table external/boost_mpi/1.47.0+4 lsstbuild:external/boost_mpi/1.47.0/boost_mpi.bld
