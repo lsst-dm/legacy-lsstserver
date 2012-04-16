@@ -1,0 +1,16 @@
+# lsst build script for rhel5_gcc44
+# 
+set -e
+
+# Check the user has the gcc44 RPM installed, and that this is RHEL5
+grep -q 'release 5.' /etc/redhat-release 2>/dev/null || { echo "this does not appear to be a RHEL5 (or compatible) system. Aborting."; false; }
+
+# Check the user has the gcc44 RPM installed, and that this is RHEL5
+which g++44      >/dev/null 2>&1 || { echo "Please install gcc44-c++ RPM (or make g++44 available on PATH)"; false; }
+which gfortran44 >/dev/null 2>&1 || { echo "Please install gcc44-gfortran RPM (or make gfortran44 available on PATH)"; false; }
+which gcc44      >/dev/null 2>&1 || { echo "Please install gcc44 RPM (or make gcc44 available on PATH)"; false; }
+
+mkdir -p "$installdir/bin" && cd "$installdir/bin"
+for B in g++ gfortran gcc; do
+	ln -s $(which ${B}44) $B
+done
