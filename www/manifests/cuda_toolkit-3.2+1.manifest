@@ -1,0 +1,5 @@
+EUPS distribution manifest for cuda_toolkit (3.2+1). Version 1.0
+#
+# pkg  flavor  version tablefile                          installation_directory  installID
+#----- ------- ------- ---------------------------------- ----------------------- -----------
+cuda_toolkit  generic 3.2+1 external/cuda_toolkit/3.2/cuda_toolkit.table   external/cuda_toolkit/3.2+1  lsstbuild:external/cuda_toolkit/3.2/cuda_toolkit+1.bld
