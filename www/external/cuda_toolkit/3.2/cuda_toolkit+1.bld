@@ -1,5 +1,6 @@
 # lsst build script for cuda_toolkit
 # 
+set -e
 
 # The user has to help us and tell us where CUDA is installed
 [ -n "$CUDA" ] || { echo "please set the environment variable CUDA to the directory where your CUDA Toolkit resides (i.e., nvcc should be in $CUDA/bin)."; false; }
