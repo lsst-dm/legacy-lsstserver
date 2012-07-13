@@ -1,0 +1,14 @@
+EUPS distribution manifest for sconsUtils (5.1.0.1+1). Version 1.0
+#
+# Creator:      LSST Software Manager
+# Time:         2012/06/13 12:00:09 CDT
+# Eups version: 1.2.32
+#
+# Submitter:    rowen
+# pkg           flavor       version    tablefile                 installation_directory         installID
+#---------------------------------------------------------------------------------------------------------
+doxygen         generic      1.7.6.1+1  doxygen/1.7.6.1/doxygen.table doxygen/1.7.6.1+1              lsstbuild:doxygen/1.7.6.1/doxygen-1.7.6.1.tar.gz
+tcltk           generic      8.5.9+1    tcltk/8.5.9/tcltk.table   tcltk/8.5.9+1                  lsstbuild:tcltk/8.5.9/tcltk-8.5.9.tar.gz
+python          generic      2.7.2+3    python/2.7.2/python.table python/2.7.2+3                 lsstbuild:python/2.7.2/python-2.7.2.tar.gz
+scons           generic      2.1.0+3    scons/2.1.0/scons.table   scons/2.1.0+3                  lsstbuild:scons/2.1.0/scons-2.1.0.tar.gz
+sconsUtils      generic      5.1.0.1+1  sconsUtils/5.1.0.1/sconsUtils.table sconsUtils/5.1.0.1+1           lsstbuild:sconsUtils/5.1.0.1/sconsUtils-5.1.0.1.tar.gz

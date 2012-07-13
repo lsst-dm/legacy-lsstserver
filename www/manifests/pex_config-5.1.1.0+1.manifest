@@ -1,0 +1,22 @@
+EUPS distribution manifest for pex_config (5.1.1.0+1). Version 1.0
+#
+# Creator:      LSST Software Manager
+# Time:         2012/06/13 12:32:51 CDT
+# Eups version: 1.2.32
+#
+# Submitter:    rowen
+# pkg           flavor       version    tablefile                 installation_directory         installID
+#---------------------------------------------------------------------------------------------------------
+doxygen         generic      1.7.6.1+1  doxygen/1.7.6.1/doxygen.table doxygen/1.7.6.1+1              lsstbuild:doxygen/1.7.6.1/doxygen-1.7.6.1.tar.gz
+swig            generic      2.0.4+3    swig/2.0.4/swig.table     swig/2.0.4+3                   lsstbuild:swig/2.0.4/swig-2.0.4.tar.gz
+tcltk           generic      8.5.9+1    tcltk/8.5.9/tcltk.table   tcltk/8.5.9+1                  lsstbuild:tcltk/8.5.9/tcltk-8.5.9.tar.gz
+python          generic      2.7.2+3    python/2.7.2/python.table python/2.7.2+3                 lsstbuild:python/2.7.2/python-2.7.2.tar.gz
+boost           generic      1.47.0+6   boost/1.47.0/boost.table  boost/1.47.0+6                 lsstbuild:boost/1.47.0/boost-1.47.0.tar.gz
+scons           generic      2.1.0+3    scons/2.1.0/scons.table   scons/2.1.0+3                  lsstbuild:scons/2.1.0/scons-2.1.0.tar.gz
+sconsUtils      generic      5.1.0.1+1  sconsUtils/5.1.0.1/sconsUtils.table sconsUtils/5.1.0.1+1           lsstbuild:sconsUtils/5.1.0.1/sconsUtils-5.1.0.1.tar.gz
+base            generic      4.8.0.0+9  base/4.8.0.0/base.table   base/4.8.0.0+9                 lsstbuild:base/4.8.0.0/base-4.8.0.0.tar.gz
+pex_exceptions  generic      5.1.0.0+1  pex_exceptions/5.1.0.0/pex_exceptions.table pex_exceptions/5.1.0.0+1       lsstbuild:pex_exceptions/5.1.0.0/pex_exceptions-5.1.0.0.tar.gz
+utils           generic      5.1.0.0+1  utils/5.1.0.0/utils.table utils/5.1.0.0+1                lsstbuild:utils/5.1.0.0/utils-5.1.0.0.tar.gz
+daf_base        generic      5.1.0.1+1  daf_base/5.1.0.1/daf_base.table daf_base/5.1.0.1+1             lsstbuild:daf_base/5.1.0.1/daf_base-5.1.0.1.tar.gz
+pex_policy      generic      4.8.0.0+9  pex_policy/4.8.0.0/pex_policy.table pex_policy/4.8.0.0+9           lsstbuild:pex_policy/4.8.0.0/pex_policy-4.8.0.0.tar.gz
+pex_config      generic      5.1.1.0+1  pex_config/5.1.1.0/pex_config.table pex_config/5.1.1.0+1           lsstbuild:pex_config/5.1.1.0/pex_config-5.1.1.0.tar.gz
