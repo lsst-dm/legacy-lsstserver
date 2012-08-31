@@ -1,4 +1,4 @@
-EUPS distribution v5_2 version list. Version 1.0
+EUPS distribution Summer2012 version list. Version 1.0
 #
 #
 # pkg               flavor     version        extra_dir  pkg_dir
@@ -49,6 +49,7 @@ daf_base            generic    5.1.0.1+1
 daf_butlerUtils     generic    5.2.0.3+4                               
 daf_persistence     generic    5.2.0.2+1                               
 datarel             generic    5.2.1.5+4                               
+devenv_servertools  generic    4.8.0.1+1                               
 geom                generic    4.8.0.2+7                               
 ip_diffim           generic    5.2.0.1+2                               
 ip_isr              generic    5.1.1.1+6                               

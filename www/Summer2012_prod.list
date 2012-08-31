@@ -1,4 +1,4 @@
-EUPS distribution v5_2 version list. Version 1.0
+EUPS distribution Summer2012_prod version list. Version 1.0
 #
 #
 # pkg               flavor     version        extra_dir  pkg_dir
@@ -35,47 +35,47 @@ xpa                 generic    2.1.13+1
 #
 # [lsst]
 #
-afw                 generic    5.2.1.0+4                               
-ap                  generic    5.2.1.1+4                               
+afw                 generic    5.2.1.0+1                               
+ap                  generic    5.2.1.1+1                               
 base                generic    4.8.0.0+9                               
 cat                 generic    5.2.1.0+1                               
-coadd_chisquared    generic    5.1.0.1+3                               
+coadd_chisquared    generic    5.1.0.1+2                               
 coadd_utils         generic    5.1.1.0+2                               
 ctrl_events         generic    4.8.0.0+15                              
-ctrl_orca           generic    5.2.2.2+2                               
+ctrl_orca           generic    5.2.2.2+1                               
 ctrl_provenance     generic    4.8.0.3+2                               
-ctrl_sched          generic    5.1.0.0+16                              
+ctrl_sched          generic    5.1.0.0+13                              
 daf_base            generic    5.1.0.1+1                               
-daf_butlerUtils     generic    5.2.0.3+4                               
+daf_butlerUtils     generic    5.2.0.3+1                               
 daf_persistence     generic    5.2.0.2+1                               
-datarel             generic    5.2.1.5+4                               
+datarel             generic    5.2.1.5+1                               
 geom                generic    4.8.0.2+7                               
-ip_diffim           generic    5.2.0.1+2                               
-ip_isr              generic    5.1.1.1+6                               
-lsst                generic    4.7.1.2+10                              
+ip_diffim           generic    5.2.0.1+1                               
+ip_isr              generic    5.1.1.1+3                               
+lsst                generic    4.7.1.2+3                              
 lssteups            generic    4.7.1.4+1                               
-meas_algorithms     generic    5.2.1.1+6                               
-meas_astrom         generic    5.2.1.0+4                               
-meas_extensions_multiShapelet  generic    5.2.1.1+1                               
-ndarray             generic    5.2.0.1+3                               
-obs_lsstSim         generic    5.2.1.0+9                               
-obs_sdss            generic    5.2.1.6+2                               
+meas_algorithms     generic    5.2.1.1+3                               
+meas_astrom         generic    5.2.1.0+3                               
+meas_extensions_multiShapelet  generic    5.2.1.0+3                               
+ndarray             generic    5.1.0.2+2                               
+obs_lsstSim         generic    5.2.1.0+8                               
+obs_sdss            generic    5.2.1.6+1                               
 obs_test            generic    5.2.0.1+1                               
 pex_config          generic    5.1.1.0+1                               
 pex_exceptions      generic    5.1.0.0+1                               
-pex_harness         generic    5.2.0.0+2                               
+pex_harness         generic    5.2.0.0+1                               
 pex_logging         generic    5.1.0.1+1                               
 pex_policy          generic    4.8.0.0+9                               
-pipe_base           generic    5.2.0.1+4                               
-pipe_tasks          generic    5.2.0.2+9                               
+pipe_base           generic    5.2.0.1+1                               
+pipe_tasks          generic    5.2.0.2+8                               
 sconsUtils          generic    5.1.0.1+1                               
-skymap              generic    5.1.1.2+5                               
-skypix              generic    5.1.0.0+5                               
-testing_displayQA   generic    5.2.0.0+4                               
-testing_endtoend    generic    5.2.0.1+5                               
-testing_pipeQA      generic    5.2.0.1+4                               
+skymap              generic    5.1.1.2+2                               
+skypix              generic    5.1.0.0+2                               
+testing_displayQA   generic    5.2.0.0+1                               
+testing_endtoend    generic    5.2.0.1+4                               
+testing_pipeQA      generic    5.2.0.1+3                               
 utils               generic    5.1.0.0+1                               
 #
 # [pseudo]
 #
-lsstactive          generic    5.2.0.1+26     pseudo                   
+lsstactive          generic    5.2.0.1+24     pseudo                   
