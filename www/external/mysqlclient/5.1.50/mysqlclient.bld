@@ -10,7 +10,16 @@ C=$(basename "$CC")
     patch -p1 < ../clang-preprocessor-output-difference.patch
 }
 
-simplemake --without-server --enable-thread-safe-client --enable-local-infile
+#simplemake --without-server --enable-thread-safe-client --enable-local-infile
+doconfig --without-server --enable-thread-safe-client --enable-local-infile
+
+# Hack for clang 3.1 compatibility on Linux
+test "${C:0:5}" == "clang" && $CC -v 2>&1 | grep -q '^clang version 3\.1' && $CC -v 2>&1 | grep -q 'Target: .*linux.*' && {
+    echo '/* LSST: clang compatibility hack */' >> include/config.h
+    echo '#define HAVE_GETHOSTBYNAME_R_GLIBC2_STYLE 1' >> include/config.h
+}
+
+make && makeinstall
 
 fetch_cfg
 
