@@ -1,0 +1,8 @@
+EUPS distribution manifest for boost (1.51.0+2). Version 1.0
+#
+# pkg  flavor  version tablefile                          installation_directory  installID
+#----- ------- ------- ---------------------------------- ---------------------
+tcltk  generic 8.5.12+1 external/tcltk/8.5.12/tcltk.table   external/tcltk/8.5.12+1  lsstbuild:external/tcltk/8.5.12/tcltk.bld
+sqlite generic 3.7.14+1 external/sqlite/3.7.14/sqlite.table external/sqlite/3.7.14+1 lsstbuild:external/sqlite/3.7.14/sqlite.bld
+python generic 2.7.3+1 external/python/2.7.3/python.table external/python/2.7.3+1 lsstbuild:external/python/2.7.3/python.bld
+boost  generic 1.51.0+2 external/boost/1.51.0/boost.table external/boost/1.51.0+2 lsstbuild:external/boost/1.51.0/boost.bld
