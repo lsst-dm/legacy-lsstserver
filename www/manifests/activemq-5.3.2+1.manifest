@@ -1,5 +1,0 @@
-EUPS distribution manifest for activemq (5.3.2). Version 1.0
-#
-# pkg    flavor  version tablefile                              installation_directory    installID
-#------- ------- ------- -------------------------------------- ---------------
-activemq generic 5.3.2+1 external/activemq/5.3.2/activemq.table external/activemq/5.3.2+1 lsstbuild:external/activemq/5.3.2/activemq.bld

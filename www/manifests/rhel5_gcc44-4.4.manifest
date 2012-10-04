@@ -1,5 +1,0 @@
-EUPS distribution manifest for rhel4_gcc44 (4.4). Version 1.0
-#
-# pkg  flavor  version tablefile                          installation_directory  installID
-#----- ------- ------- ---------------------------------- ----------------------- -----------
-rhel5_gcc44  generic 4.4 external/rhel5_gcc44/4.4/rhel5_gcc44.table   external/rhel5_gcc44/4.4  lsstbuild:external/rhel5_gcc44/4.4/rhel5_gcc44.bld

@@ -1,5 +1,0 @@
-EUPS distribution manifest for gsl (1.15+1). Version 1.0
-#
-# pkg flavor  version tablefile                   installation_directory installID
-#---- ------- ------- --------------------------- ---------------------- ------
-gsl   generic 1.15+1  external/gsl/1.15/gsl.table external/gsl/1.15+1    lsstbuild:external/gsl/1.15/gsl-1.15.tar.gz

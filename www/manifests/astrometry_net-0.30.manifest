@@ -1,5 +1,0 @@
-EUPS distribution manifest for astrometry_net (0.30). Version 1.0
-#
-# pkg          flavor  version tablefile                                         installation_directory         installID
-#------------- ------- ------- ------------------------------------------------
-astrometry_net generic 0.30  external/astrometry_net/0.30/astrometry_net.table external/astrometry_net/0.30 lsstbuild:external/astrometry_net/0.30/astrometry_net.bld

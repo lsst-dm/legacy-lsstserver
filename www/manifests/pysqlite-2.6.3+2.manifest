@@ -1,6 +1,0 @@
-EUPS distribution manifest for pysqlite (2.6.3+2). Version 1.0
-#
-# pkg    flavor  version  tablefile                              installation_directory    installID
-#------- ------- -------- -------------------------------------- ---------------
-sqlite   generic 3.7.10+1 external/sqlite/3.7.10/sqlite.table    external/sqlite/3.7.10+1  lsstbuild:external/sqlite/3.7.10/sqlite.bld
-pysqlite generic 2.6.3+1  external/pysqlite/2.6.3/pysqlite.table external/pysqlite/2.6.3+1 lsstbuild:external/pysqlite/2.6.3/pysqlite.bld
