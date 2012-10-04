@@ -1,0 +1,5 @@
+EUPS distribution manifest for doxygen (1.8.2+1). Version 1.0
+#
+# pkg   flavor  version tablefile                            installation_directory   installID
+#------ ------- ------- ------------------------------------ ------------------
+doxygen generic 1.8.2+1 external/doxygen/1.8.2/doxygen.table external/doxygen/1.8.2+1 lsstbuild:external/doxygen/1.8.2/doxygen.bld
