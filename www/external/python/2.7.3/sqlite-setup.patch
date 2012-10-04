@@ -1,0 +1,12 @@
+--- setup.py	2012-04-09 19:07:36.000000000 -0400
++++ setup.py.lsst	2012-09-12 19:12:51.680033733 -0400
+@@ -1003,7 +1003,8 @@
+ 
+         # We hunt for #define SQLITE_VERSION "n.n.n"
+         # We need to find >= sqlite version 3.0.8
+-        sqlite_incdir = sqlite_libdir = None
++        sqlite_incdir = os.path.join(os.environ["SQLITE_DIR"], "include")
++        sqlite_libdir = os.path.join(os.environ["SQLITE_DIR"], "lib")
+         sqlite_inc_paths = [ '/usr/include',
+                              '/usr/include/sqlite',
+                              '/usr/include/sqlite3',
