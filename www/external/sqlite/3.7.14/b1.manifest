@@ -1,0 +1,5 @@
+EUPS distribution manifest for sqlite (3.7.14+1). Version 1.0
+#
+# pkg  flavor  version    tablefile                             installation_directory     installID
+#----- ------- ---------- ------------------------------------- ---------------
+sqlite generic 3.7.14+1 external/sqlite/3.7.14/sqlite.table external/sqlite/3.7.14+1 lsstbuild:external/sqlite/3.7.14/sqlite.bld
