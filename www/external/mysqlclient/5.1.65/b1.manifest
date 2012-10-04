@@ -1,0 +1,5 @@
+EUPS distribution manifest for mysqlclient (5.1.65+1). Version 1.0
+#
+# pkg       flavor  version  tablefile                                     installation_directory        installID
+#---------- ------- -------- --------------------------------------------- ----
+mysqlclient generic 5.1.65+1 external/mysqlclient/5.1.65/mysqlclient.table external/mysqlclient/5.1.65+1 lsstbuild:external/mysqlclient/5.1.65/mysqlclient.bld
