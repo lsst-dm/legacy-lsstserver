@@ -1,0 +1,5 @@
+EUPS distribution manifest for fftw (3.3.2+1). Version 1.0
+#
+# pkg flavor  version tablefile                    installation_directory installID
+#---- ------- ------- ---------------------------- ---------------------- -----
+fftw  generic 3.3.2+1   external/fftw/3.3.2/fftw.table external/fftw/3.3.2+1    lsstbuild:external/fftw/3.3.2/fftw.bld

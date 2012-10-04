@@ -1,0 +1,11 @@
+# LSST build script for fftw-3.1.2+1
+#
+set -e
+fetch external/fftw/${release}/fftw-${release}.tar.gz
+unpack_tar_and_enter fftw-${release}.tar.gz
+
+doconfig --disable-fortran --enable-shared
+make
+make -j1 install
+
+fetch_cfg
