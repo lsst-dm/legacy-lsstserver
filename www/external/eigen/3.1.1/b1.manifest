@@ -1,0 +1,5 @@
+EUPS distribution manifest for eigen (3.1.1+1). Version 1.0
+#
+# pkg flavor  version tablefile                        installation_directory installID
+#---- ------- ------- -------------------------------- ---------------------- -
+eigen generic 3.1.1+1 external/eigen/3.1.1/eigen.table external/eigen/3.1.1+1 lsstbuild:external/eigen/3.1.1/eigen.bld
