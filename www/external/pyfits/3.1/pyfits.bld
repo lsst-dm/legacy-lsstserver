@@ -1,0 +1,16 @@
+#
+# lssteups build script for pyfits
+#
+set -e
+
+fetch external/$product/$release/pyfits-${release}.tar.gz
+unpack_tar_and_enter pyfits-${release}.tar.gz
+
+pyinstalldir=$installdir/lib/python
+PYTHONPATH=${pyinstalldir}:$PYTHONPATH
+mkdir -p $pyinstalldir
+
+simplepysetup
+
+
+
