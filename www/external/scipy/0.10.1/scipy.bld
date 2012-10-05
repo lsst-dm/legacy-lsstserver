@@ -1,0 +1,11 @@
+# lsst build script for scipy
+# 
+set -e
+fetch external/scipy/$release/scipy-${release}.tar.gz
+
+unpack_tar_and_enter scipy-${release}.tar.gz
+
+unset LDFLAGS
+echo python setup.py build --fcompiler=gnu95 | tee -a $buildlog
+python setup.py build --fcompiler=gnu95 >> $buildlog 2>&1 
+simplepysetup
