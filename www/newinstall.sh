@@ -7,7 +7,7 @@
 # set -x
 SHELL=/bin/bash
 LSST_HOME=$PWD
-export EUPS_PKGROOT=http://sw.lsstcorp.org/pkgs/std/w12
+export EUPS_PKGROOT=http://sw.lsstcorp.org/pkgs
 owneups=
 httpget=
 
