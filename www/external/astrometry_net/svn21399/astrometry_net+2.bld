@@ -1,0 +1,17 @@
+# LSST build script for astrometry_net
+#
+# This should work on Linux, Linux64, and DarwinX86
+#
+set -e
+tarfile=astrometry.net-0.30.tar.gz
+
+fetch external/astrometry_net/$release/$tarfile
+unpack_tar_and_enter $tarfile
+
+fetch external/astrometry_net/$release/blind-Makefile
+mv -f blind-Makefile blind/Makefile
+
+fetch_cfg
+
+make -j 1
+INSTALL_DIR=$installdir make -j 1 install

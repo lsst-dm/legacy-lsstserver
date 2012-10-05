@@ -1,0 +1,5 @@
+EUPS distribution manifest for astrometry_net (svn21399). Version 1.0
+#
+# pkg          flavor  version tablefile                                         installation_directory         installID
+#------------- ------- ------- ------------------------------------------------
+astrometry_net generic svn21399  external/astrometry_net/svn21399/astrometry_net.table external/astrometry_net/svn21399 lsstbuild:external/astrometry_net/svn21399/astrometry_net.bld
