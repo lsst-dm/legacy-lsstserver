@@ -1,0 +1,6 @@
+EUPS distribution manifest for xpa (2.1.14+1). Version 1.0
+#
+# pkg flavor  version   tablefile                        installation_directory installID
+#---- ------- --------- -------------------------------- ----------------------
+tcltk generic 8.5.12+1   external/tcltk/8.5.12/tcltk.table external/tcltk/8.5.12+1 lsstbuild:external/tcltk/8.5.12/tcltk.bld
+xpa   generic 2.1.14+1 external/xpa/2.1.14/xpa.table   external/xpa/2.1.14+1 lsstbuild:external/xpa/2.1.14/xpa.bld
