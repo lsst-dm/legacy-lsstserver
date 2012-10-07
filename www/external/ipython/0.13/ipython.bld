@@ -1,0 +1,7 @@
+# lsst build script for ipython
+# 
+set -e
+fetch external/ipython/$release/ipython-${release}.tar.gz
+unpack_tar_and_enter ipython-${release}.tar.gz
+
+pysetup --home=$installdir
