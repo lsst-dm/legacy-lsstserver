@@ -1,0 +1,61 @@
+# LSST build script for boost 
+#
+# This should work on Linux, Linux64, and DarwinX86
+#
+set -e
+vstr=`echo $release | sed -e 's/\./_/g'`
+tarfile=boost_$vstr.tar.gz
+patch1=boost-gil-clang-c++11-narrowing.patch
+
+fetch external/boost/$release/$tarfile
+unpack_tar_and_enter $tarfile
+
+cd boost_$vstr  # don't know why _and_enter above doesn't work
+fetch external/boost/$release/$patch1
+echo "patch boost/gil/channel_algorithm.hpp < $patch1"
+patch boost/gil/channel_algorithm.hpp < $patch1
+
+echo ./bootstrap.sh --without-libraries=mpi --prefix=$installdir | tee -a $buildlog
+./bootstrap.sh --without-libraries=mpi --prefix=$installdir >> $buildlog 2>&1 || {
+    echo "Boost Bootstrap..."
+    tail -20 $buildlog
+    echo "$prog: bootstrap failed; see $PWD/$buildlog for details"
+    false
+}
+
+# see how much we can parallelize (on Linux)
+para=-j2
+[ -e /proc/cpuinfo ] && {
+    nproc=`grep '^processor' /proc/cpuinfo | sort -r | head -1 | sed -e 's/^.*: //'`
+    ncores=`grep '^cpu cores' /proc/cpuinfo | head -1 | sed -e 's/^.*: //'`
+    [ -n "$nproc" -a -n "$ncores" ] && {
+        totcores=$(( ($nproc + 1) * $ncores ))
+        if [ "$totcores" -gt 4 ]; then
+            para=-j6
+        elif [ "$totcores" -gt 2 ]; then
+            para=-j4
+        fi
+    }
+}
+
+# Test for clang
+C=$(basename "$CXX")
+[ "${C:0:5}" == "clang" ] && {
+    toolset="toolset=clang"
+}
+
+echo ./b2 $para --without-mpi $toolset install | tee -a $buildlog
+./b2 $para --without-mpi $toolset install >> $buildlog 2>&1 || {
+    echo "bjam install ..."
+    tail -20 $buildlog
+    echo "$prog: bjam failed; see $PWD/$buildlog for details"
+    false
+}
+
+# Download the config files
+mkdir -p $installdir/ups
+cd $installdir/ups
+for cfg in boost boost_filesystem boost_math boost_regex boost_serialization boost_system boost_test; do
+	fetch external/boost/$release/cfg/$cfg.cfg
+	test "$cfg" == "${cfg%+*}" || mv $cfg.cfg ${cfg%+*}.cfg
+done
