@@ -1,0 +1,30 @@
+EUPS distribution manifest for thirdparty_core (6.1.0.1+3). Version 1.0
+#
+# pkg          flavor  version   tablefile                                         installation_directory        installID
+#------------- ------- --------- ------------------------------------------------- --------------------------
+tcltk  generic 8.5.12+1 external/tcltk/8.5.12/tcltk.table   external/tcltk/8.5.12+1  lsstbuild:external/tcltk/8.5.12/tcltk.bld
+sqlite generic 3.7.14+1 external/sqlite/3.7.14/sqlite.table external/sqlite/3.7.14+1 lsstbuild:external/sqlite/3.7.14/sqlite.bld
+python generic 2.7.3+1 external/python/2.7.3/python.table external/python/2.7.3+1 lsstbuild:external/python/2.7.3/python.bld
+scons        generic 2.1.0+4 external/scons/2.1.0/scons.table               external/scons/2.1.0+4        lsstbuild:external/scons/2.1.0/scons.bld
+numpy  generic 1.6.2+1 external/numpy/1.6.2/numpy.table   external/numpy/1.6.2+1  lsstbuild:external/numpy/1.6.2/numpy.bld
+mysqlclient generic 5.1.65+2 external/mysqlclient/5.1.65/mysqlclient.table external/mysqlclient/5.1.65+2 lsstbuild:external/mysqlclient/5.1.65/mysqlclient+2.bld
+mysqlpython generic 1.2.3+5  external/mysqlpython/1.2.3/mysqlpython.table  external/mysqlpython/1.2.3+5  lsstbuild:external/mysqlpython/1.2.3/mysqlpython.bld
+swig           generic 2.0.4+3   external/swig/2.0.4/swig.table                    external/swig/2.0.4+3         lsstbuild:external/swig/2.0.4/swig+3.bld
+boost  generic 1.51.0+3 external/boost/1.51.0/boost.table external/boost/1.51.0+3 lsstbuild:external/boost/1.51.0/boost+3.bld
+doxygen generic 1.8.2+1 external/doxygen/1.8.2/doxygen.table external/doxygen/1.8.2+1 lsstbuild:external/doxygen/1.8.2/doxygen.bld
+pyfits generic 3.1+1 external/pyfits/3.1/pyfits.table external/pyfits/3.1+1 lsstbuild:external/pyfits/3.1/pyfits.bld
+cfitsio generic 3310+1  external/cfitsio/3310/cfitsio.table external/cfitsio/3310+1 lsstbuild:external/cfitsio/3310/cfitsio.bld
+wcslib  generic 4.14+2   external/wcslib/4.14/wcslib.table      external/wcslib/4.14+2   lsstbuild:external/wcslib/4.14/wcslib.bld
+eigen generic 3.1.1+1 external/eigen/3.1.1/eigen.table external/eigen/3.1.1+1 lsstbuild:external/eigen/3.1.1/eigen.bld
+gsl   generic 1.15+1  external/gsl/1.15/gsl.table external/gsl/1.15+1    lsstbuild:external/gsl/1.15/gsl-1.15.tar.gz
+fftw  generic 3.3.2+1   external/fftw/3.3.2/fftw.table external/fftw/3.3.2+1    lsstbuild:external/fftw/3.3.2/fftw.bld
+libpng         generic 1.2.35+1  external/libpng/1.2.35/libpng.table               external/libpng/1.2.35+1      lsstbuild:external/libpng/1.2.35/libpng-1.2.35.tar.gz
+freetype       generic 2.3.8+1   external/freetype/2.3.8/freetype.table            external/freetype/2.3.8+1     lsstbuild:external/freetype/2.3.8/freetype-2.3.8.tar.gz
+matplotlib generic 1.1.1+2  external/matplotlib/1.1.1/matplotlib.table external/matplotlib/1.1.1+2 lsstbuild:external/matplotlib/1.1.1/matplotlib+2.bld
+minuit2        generic 5.22.00+1 external/minuit2/5.22.00/minuit2.table            external/minuit2/5.22.00+1    lsstbuild:external/minuit2/5.22.00/minuit2.bld
+xpa   generic 2.1.14+1 external/xpa/2.1.14/xpa.table   external/xpa/2.1.14+1 lsstbuild:external/xpa/2.1.14/xpa.bld
+apr            generic 1.3.3+1   external/apr/1.3.3/apr.table                      external/apr/1.3.3+1          lsstbuild:external/apr/1.3.3/apr.bld
+activemqcpp    generic 3.1.2+2   external/activemqcpp/3.1.2/activemqcpp.table      external/activemqcpp/3.1.2+2  lsstbuild:external/activemqcpp/3.1.2/activemqcpp.bld
+astrometry_net generic 0.30      external/astrometry_net/0.30/astrometry_net.table external/astrometry_net/0.30  lsstbuild:external/astrometry_net/0.30/astrometry_net.bld
+pysqlite generic 2.6.3+3  external/pysqlite/2.6.3/pysqlite.table external/pysqlite/2.6.3+3 lsstbuild:external/pysqlite/2.6.3/pysqlite.bld
+scisql generic 0.3+1   external/scisql/0.3/scisql.table   external/scisql/0.3+1   lsstbuild:external/scisql/0.3/scisql.bld
