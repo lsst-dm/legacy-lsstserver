@@ -1,0 +1,41 @@
+EUPS distribution v5_2 version list. Version 1.0
+#
+#
+# pkg               flavor     version        extra_dir  pkg_dir
+#-----------------  ---------  -------------  ---------  --------------
+#
+# [external]
+#
+activemqcpp         generic    3.1.2+2        external                 
+apr                 generic    1.3.3+1        external                 
+astrometry_net      generic    0.30           external                 
+boost               generic    1.51.0+3       external                 
+cfitsio             generic    3310+1         external                 
+doxygen             generic    1.8.2+1        external                 
+eigen               generic    3.1.1+1        external                 
+fftw                generic    3.3.2+1        external                 
+freetype            generic    2.3.8+1        external                 
+gsl                 generic    1.15+1         external                 
+libpng              generic    1.2.35+1       external                 
+matplotlib          generic    1.1.1+2        external                 
+minuit2             generic    5.22.00+1      external                 
+mysqlclient         generic    5.1.65+2       external                 
+mysqlpython         generic    1.2.3+5        external                 
+numpy               generic    1.6.2+1        external                 
+pyfits              generic    3.1+1          external                 
+pysqlite            generic    2.6.3+3        external                 
+python              generic    2.7.3+1        external                 
+scisql              generic    0.3+1          external                 
+scons               generic    2.1.0+4        external                 
+sqlite              generic    3.7.14+1       external                 
+swig                generic    2.0.4+3        external                 
+tcltk               generic    8.5.12+1       external                 
+wcslib              generic    4.14+2         external                 
+xpa                 generic    2.1.14+1                                
+#
+# [lsst]
+#
+#
+# [pseudo]
+#
+thirdparty_core     generic    6.1.0.1+4      pseudo
