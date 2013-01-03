@@ -4,4 +4,7 @@ set -e
 fetch external/cfitsio/$release/cfitsio$release.tar.gz
 unpack_tar_and_enter cfitsio$release.tar.gz 
 doconfig && make && make shared && make fpack && make funpack && make install
+mkdir -p $installdir/bin
+cp fpack $installdir/bin/fpack
+cp funpack $installdir/bin/funpack
 fetch_cfg
