@@ -13,7 +13,7 @@ if (type == exact) {
    setupRequired(pex_exceptions  -j 5.1.0.0+1)
    setupRequired(swig            -j 2.0.4+3)
    setupRequired(daf_persistence -j 5.1.1.0+1)
-   setupRequired(mysqlclient     -j 5.1.50+1)
+   setupRequired(mariadbclient)
    setupRequired(pex_logging     -j 5.1.0.1+1)
    setupRequired(pex_policy      -j 4.8.0.0+9)
    setupRequired(pex_config      -j 5.1.1.0+1)
