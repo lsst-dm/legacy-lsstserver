@@ -1,2 +1,2 @@
 setupRequired("python" >= 2.5.2)
-envAppend(PATH, ${PRODUCT_DIR}/bin)
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
